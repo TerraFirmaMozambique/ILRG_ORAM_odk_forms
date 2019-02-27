@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>ILRG ORAM C Limites dos povoados</h:title>
+    <h:title>ILRG ORAM C - Limites dos povoados</h:title>
     <model>
       <itext>
         <translation default="true()" lang="default">
@@ -13,6 +13,7 @@
       <instance>
         <ILRG_ORAM_C_limites id="ILRG_ORAM_C" version="201902271">
           <start/>
+          <deviceid/>
           <my_form_name/>
           <Cg1>
             <logo/>
@@ -43,6 +44,7 @@
         </ILRG_ORAM_C_limites>
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_C_limites/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_C_limites/deviceid" type="string"/>
       <bind calculate="&quot;Formulario C - Identificação e mapeamento dos limites dos povoados&quot;" nodeset="/ILRG_ORAM_C_limites/my_form_name" type="string"/>
       <bind nodeset="/ILRG_ORAM_C_limites/Cg1/logo" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_C_limites/Cg1/cavateco" readonly="true()" type="string"/>
@@ -85,7 +87,7 @@ O técnico pode usar o formulário para capturar pontos durante uma caminhada da
 Por favor deslizar para a frente para continuar.</label>
     </input>
     <select1 ref="/ILRG_ORAM_C_limites/tec_name">
-      <label>&lt;h1&gt;Introduza o seu nome&lt;/h&gt;&lt;br&gt;&lt;br&gt;Nome do(a) técnico(a):</label>
+      <label>&lt;h2&gt;Introduza o seu nome&lt;/h2&gt;&lt;br&gt;&lt;br&gt;Nome do(a) técnico(a):</label>
       <item>
         <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>

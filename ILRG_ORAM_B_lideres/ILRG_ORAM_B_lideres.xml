@@ -11,8 +11,9 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_B_lideres id="ILRG_ORAM_B" version="201902272">
+        <ILRG_ORAM_B_lideres id="ILRG_ORAM_B" version="201902271">
           <start/>
+          <deviceid/>
           <my_form_name/>
           <Bg1>
             <logo/>
@@ -48,6 +49,7 @@
         </ILRG_ORAM_B_lideres>
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_B_lideres/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_B_lideres/deviceid" type="string"/>
       <bind calculate="&quot;Formulario B - Recolha de Dados Iniciais&quot;" nodeset="/ILRG_ORAM_B_lideres/my_form_name" type="string"/>
       <bind nodeset="/ILRG_ORAM_B_lideres/Bg1/logo" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_B_lideres/Bg1/cavateco" readonly="true()" type="string"/>
@@ -97,7 +99,7 @@ A captura do nome do povoado ou aglomeracao deve ser feito numa maneira que ajud
 Por favor deslizar para a frente para continuar.</label>
     </input>
     <select1 appearance="minimal" ref="/ILRG_ORAM_B_lideres/tec_name">
-      <label>Nome do(s) técnico(s):</label>
+      <label>&lt;h2&gt;Introduza o seu nome&lt;/h2&gt;&lt;br&gt;&lt;br&gt;Nome do(a) técnico(a):</label>
       <item>
         <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>

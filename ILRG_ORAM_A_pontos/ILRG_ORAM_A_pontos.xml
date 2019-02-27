@@ -11,8 +11,9 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_A_pontos id="ILRG_ORAM_A" version="201902272">
+        <ILRG_ORAM_A_pontos id="ILRG_ORAM_A" version="201902271">
           <start/>
+          <deviceid/>
           <my_form_name/>
           <Ag1>
             <logo/>
@@ -59,6 +60,7 @@
         </ILRG_ORAM_A_pontos>
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_A_pontos/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_A_pontos/deviceid" type="string"/>
       <bind calculate="&quot;Formulario A - Mapeamento de Pontos de Interesse&quot;" nodeset="/ILRG_ORAM_A_pontos/my_form_name" type="string"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/Ag1/logo" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/Ag1/cavateco" readonly="true()" type="string"/>
@@ -124,7 +126,7 @@ O técnico pode usar o formulário para selecionar e gravar informação sobre e
 Por favor deslizar para a frente para continuar.</label>
     </input>
     <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/tec_name">
-      <label>Nome do(a) técnico(a):</label>
+      <label>&lt;h2&gt;Introduza o seu nome&lt;/h2&gt;&lt;br&gt;&lt;br&gt;Nome do(a) técnico(a):</label>
       <item>
         <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>
