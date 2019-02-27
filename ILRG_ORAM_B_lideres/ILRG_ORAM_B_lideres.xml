@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM B - Recolha de Dados Inicias</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_B_lideres/Bg1/logo:label">
+            <value form="image">jr://images/form_logo.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_B_lideres id="ILRG_ORAM_B" version="201902272">
+          <start/>
+          <my_form_name/>
+          <Bg1>
+            <logo/>
+            <cavateco/>
+          </Bg1>
+          <intronote/>
+          <tec_name/>
+          <Bg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Bg2>
+          <date/>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <village_id/>
+          <Bg3>
+            <chief_level/>
+            <chief_family_name/>
+            <chief_given_name/>
+            <chief_contact/>
+          </Bg3>
+          <chief_face/>
+          <chief_id_front/>
+          <chief_id_back/>
+          <point_chief_house/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_B_lideres>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_B_lideres/start" type="dateTime"/>
+      <bind calculate="&quot;Formulario B - Recolha de Dados Iniciais&quot;" nodeset="/ILRG_ORAM_B_lideres/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/Bg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/Bg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/Bg2" relevant=" /ILRG_ORAM_B_lideres/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_B_lideres/Bg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_B_lideres/Bg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/post_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/village_id" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_B_lideres/Bg3/chief_level" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_B_lideres/Bg3/chief_family_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_B_lideres/Bg3/chief_given_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/Bg3/chief_contact" type="string"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/chief_face" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/chief_id_front" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/chief_id_back" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_B_lideres/point_chief_house" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Invalida - as respostas nesta pagina não podiam incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_B_lideres/obs" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_B_lideres/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_B_lideres/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('Village_Data','_', /ILRG_ORAM_B_lideres/village_id )" nodeset="/ILRG_ORAM_B_lideres/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_B_lideres/Bg1">
+      <label>Inicio</label>
+      <input ref="/ILRG_ORAM_B_lideres/Bg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_B_lideres/Bg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_B_lideres/Bg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;A Cadeia de Valor de Terra Comunitária&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_B_lideres/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_B_lideres/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_B_lideres/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para capturar informação inicial sobre os povoados ou aglomeracoes de populacao que estao localizados dentro duma area alvo dum programa de delimitacao.
+
+O técnico pode usar o formulário para gravar informação sobre cada povoado visitado, incluindo as coordenadas geograficas, as detalhes do povoado, nomes e contactos dos lideres e outras informações.
+
+A captura do nome do povoado ou aglomeracao deve ser feito numa maneira que ajuda identificar-lo facilmente no futuro. Quer dizer que o nome &quot;Zona 3&quot; nao fica aceitavel, mas sim &quot;Zona 3 de Namarua&quot;, por exemplo.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_B_lideres/tec_name">
+      <label>Nome do(s) técnico(s):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Costa E Antonio</label>
+        <value>Costa_E_Antonio</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_B_lideres/Bg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_B_lideres/Bg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_B_lideres/Bg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_B_lideres/date">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_B_lideres/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_ORAM_B_lideres/prov_id ]" ref="/ILRG_ORAM_B_lideres/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_B_lideres/dist_id ]" ref="/ILRG_ORAM_B_lideres/post_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('villages')/root/item[post_id= /ILRG_ORAM_B_lideres/post_id ]" ref="/ILRG_ORAM_B_lideres/village_id">
+      <label>Selecionar o povoado</label>
+    </input>
+    <group ref="/ILRG_ORAM_B_lideres/Bg3">
+      <label>Detalhes Povoado</label>
+      <input ref="/ILRG_ORAM_B_lideres/Bg3/chief_level">
+        <label>Qual é o nível ou titulo do chefe deste povoado?</label>
+        <hint>Pode ser, por exemplo, 'Cabo de Terra', 'Sapanda', 'Reinha', 'Pyamwene', etc.)</hint>
+      </input>
+      <input ref="/ILRG_ORAM_B_lideres/Bg3/chief_family_name">
+        <label>Qual é o apelido do chefe deste povoado?</label>
+      </input>
+      <input ref="/ILRG_ORAM_B_lideres/Bg3/chief_given_name">
+        <label>Qual é o nome do chefe deste povoado?</label>
+      </input>
+      <input appearance="numbers" ref="/ILRG_ORAM_B_lideres/Bg3/chief_contact">
+        <label>Qual é o contacto do chefe deste povoado?</label>
+      </input>
+    </group>
+    <upload mediatype="image/*" ref="/ILRG_ORAM_B_lideres/chief_face">
+      <label>Tire uma fotografia do chefe</label>
+      <hint>Lembrete: A fotografia deve ser do rosto da pessoa e ser claramente visível. Não tire uma fotografia na sombra e certifique-se que a pessoa está bem iluminada.</hint>
+    </upload>
+    <upload mediatype="image/*" ref="/ILRG_ORAM_B_lideres/chief_id_front">
+      <label>Tire uma fotografia do BI (frente)</label>
+    </upload>
+    <upload mediatype="image/*" ref="/ILRG_ORAM_B_lideres/chief_id_back">
+      <label>Tire uma fotografia do BI (verso)</label>
+    </upload>
+    <input ref="/ILRG_ORAM_B_lideres/point_chief_house">
+      <label>Coordenadas GPS da casa do chefe</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/ILRG_ORAM_B_lideres/obs">
+      <label>Observações sobre o encontro:</label>
+    </input>
+  </h:body>
+</h:html>

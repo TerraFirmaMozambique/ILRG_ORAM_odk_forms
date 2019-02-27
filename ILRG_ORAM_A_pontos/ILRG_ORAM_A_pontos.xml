@@ -11,7 +11,7 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_A_pontos id="ILRG_ORAM_A" version="201902271">
+        <ILRG_ORAM_A_pontos id="ILRG_ORAM_A" version="201902272">
           <start/>
           <my_form_name/>
           <Ag1>
@@ -21,11 +21,11 @@
           <intronote/>
           <tec_name/>
           <Ag2>
-            <given_name/>
-            <family_name/>
+            <tec_given_name/>
+            <tec_family_name/>
           </Ag2>
           <date/>
-          <auto_gps/>
+          <point_poi/>
           <poi_dispute/>
           <dispute_type/>
           <poi_descriptor/>
@@ -65,10 +65,10 @@
       <bind nodeset="/ILRG_ORAM_A_pontos/intronote" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/tec_name" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/Ag2" relevant=" /ILRG_ORAM_A_pontos/tec_name ='other'"/>
-      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/Ag2/given_name" required="true()" type="string"/>
-      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/Ag2/family_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/Ag2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/Ag2/tec_family_name" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/date" required="true()" type="date"/>
-      <bind nodeset="/ILRG_ORAM_A_pontos/auto_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/point_poi" required="true()" type="geopoint"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/poi_dispute" required="true()" type="select1"/>
       <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/dispute_type" relevant=" /ILRG_ORAM_A_pontos/poi_dispute  = 'yes'" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_A_pontos/poi_descriptor" required="true()" type="select1"/>
@@ -126,7 +126,7 @@ Por favor deslizar para a frente para continuar.</label>
     <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/tec_name">
       <label>Nome do(a) técnico(a):</label>
       <item>
-        <label>Andre Silvestre Cobre</label>
+        <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>
       </item>
       <item>
@@ -142,8 +142,8 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Celestino_Machaia_Maia</value>
       </item>
       <item>
-        <label>Costa E. Antonio</label>
-        <value>Costa_E._Antonio</value>
+        <label>Costa E Antonio</label>
+        <value>Costa_E_Antonio</value>
       </item>
       <item>
         <label>Eulalia Pedro Candua</label>
@@ -151,7 +151,7 @@ Por favor deslizar para a frente para continuar.</label>
       </item>
       <item>
         <label>Geraldo E. Segura</label>
-        <value>Geraldo_E._Segura</value>
+        <value>Geraldo_E_Segura</value>
       </item>
       <item>
         <label>Leonardo Henriques</label>
@@ -167,7 +167,7 @@ Por favor deslizar para a frente para continuar.</label>
       </item>
       <item>
         <label>Onessimo A. Nepele</label>
-        <value>Onessimo_A._Nepele</value>
+        <value>Onessimo_A_Nepele</value>
       </item>
       <item>
         <label>Sadraque Franscisco</label>
@@ -180,17 +180,17 @@ Por favor deslizar para a frente para continuar.</label>
     </select1>
     <group appearance="field-list" ref="/ILRG_ORAM_A_pontos/Ag2">
       <label>Novo nome do(a) técnico(a):</label>
-      <input ref="/ILRG_ORAM_A_pontos/Ag2/given_name">
+      <input ref="/ILRG_ORAM_A_pontos/Ag2/tec_given_name">
         <label>Escreve o seu nome se não apareceu na lista</label>
       </input>
-      <input ref="/ILRG_ORAM_A_pontos/Ag2/family_name">
+      <input ref="/ILRG_ORAM_A_pontos/Ag2/tec_family_name">
         <label>Escreve o seu apelido se não apareceu na lista</label>
       </input>
     </group>
     <input appearance="no-calendar" ref="/ILRG_ORAM_A_pontos/date">
       <label>Data de captura:</label>
     </input>
-    <input ref="/ILRG_ORAM_A_pontos/auto_gps">
+    <input ref="/ILRG_ORAM_A_pontos/point_poi">
       <label>Coordenadas do GPS</label>
       <hint>&lt;br/&gt; &lt;h1&gt;Lembrete: se 'gravar localização' está levando muito tempo, por favor, verifique se a luz azul do seu Garmin Glo GPS está ligada&lt;/h1&gt;</hint>
     </input>
