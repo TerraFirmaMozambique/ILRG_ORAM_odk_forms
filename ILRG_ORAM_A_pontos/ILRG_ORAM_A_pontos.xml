@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM A - Gravar Pontos de Interesse</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_A_pontos/Ag1/logo:label">
+            <value form="image">jr://images/form_logo.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_A_pontos id="ILRG_ORAM_A" version="201902271">
+          <start/>
+          <my_form_name/>
+          <Ag1>
+            <logo/>
+            <cavateco/>
+          </Ag1>
+          <intronote/>
+          <tec_name/>
+          <Ag2>
+            <given_name/>
+            <family_name/>
+          </Ag2>
+          <date/>
+          <auto_gps/>
+          <poi_dispute/>
+          <dispute_type/>
+          <poi_descriptor/>
+          <poi_descriptor_alt/>
+          <river_name/>
+          <school_name/>
+          <religious_name/>
+          <leader_name/>
+          <forest_name/>
+          <mount_name/>
+          <health_name/>
+          <cem_name/>
+          <duat_name/>
+          <control_ref/>
+          <desc_area/>
+          <desc_area_alt/>
+          <use_area/>
+          <crop/>
+          <crop_alt/>
+          <houses/>
+          <Ag3>
+            <houses_dense/>
+            <houses_type/>
+          </Ag3>
+          <poi_picture/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_A_pontos>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_A_pontos/start" type="dateTime"/>
+      <bind calculate="&quot;Formulario A - Mapeamento de Pontos de Interesse&quot;" nodeset="/ILRG_ORAM_A_pontos/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/Ag1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/Ag1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/Ag2" relevant=" /ILRG_ORAM_A_pontos/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/Ag2/given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/Ag2/family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/auto_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/poi_dispute" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/dispute_type" relevant=" /ILRG_ORAM_A_pontos/poi_dispute  = 'yes'" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/poi_descriptor" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/poi_descriptor_alt" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'other'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/river_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'river'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/school_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'school'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/religious_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'religious'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/leader_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'chief_house'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/forest_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'forest'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/mount_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'mountain'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/health_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'health_post'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/cem_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'cemetery'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/duat_name" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'duat'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/control_ref" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'control'" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/desc_area" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'zone'" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/desc_area_alt" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'zone' and  /ILRG_ORAM_A_pontos/desc_area  = 'other'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/use_area" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'zone'" required="true()" type="select"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/crop" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'zone'" required="true()" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/ILRG_ORAM_A_pontos/crop_alt" relevant="selected( /ILRG_ORAM_A_pontos/crop , 'other')" type="string"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/houses" relevant=" /ILRG_ORAM_A_pontos/poi_descriptor  = 'zone'" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/Ag3" relevant=" /ILRG_ORAM_A_pontos/houses  = 'yes'"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/Ag3/houses_dense" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/Ag3/houses_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_A_pontos/poi_picture" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_A_pontos/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_A_pontos/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('poi','_', /ILRG_ORAM_A_pontos/poi_descriptor ,'_', /ILRG_ORAM_A_pontos/date )" nodeset="/ILRG_ORAM_A_pontos/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_A_pontos/Ag1">
+      <label>Inicio</label>
+      <input ref="/ILRG_ORAM_A_pontos/Ag1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_A_pontos/Ag1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_A_pontos/Ag1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;A Cadeia de Valor de Terra Comunitária&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_A_pontos/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_A_pontos/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_A_pontos/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para gravar informação sobre os pontos de interesse (area sagradas, arvores, montanhas, etc.), pontos que tem recursos (agua, culturas, florestas, etc.) e infraestruras sociais (igrejas, cemiterios, torre celular, etc.).
+
+O formulário pode ser utilizado a qualquer altura. 
+
+Não fica necessária a identificação da localização do ponto em termos do nome da comunidade, povoação ou associação
+
+Um ponto pode ser tirado a qualquer momento, desde que esteja dentro da área do projecto. O formulário devia ser preenchido cada vez que fica identificado um ponto de interesse ou um recurso importante. 
+
+O técnico pode usar o formulário para selecionar e gravar informação sobre estes pontos, incluindo as coordenadas da localização através de GPS e uma imagem do ponto.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/tec_name">
+      <label>Nome do(a) técnico(a):</label>
+      <item>
+        <label>Andre Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Costa E. Antonio</label>
+        <value>Costa_E._Antonio</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E._Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A._Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_A_pontos/Ag2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_A_pontos/Ag2/given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_A_pontos/Ag2/family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_A_pontos/date">
+      <label>Data de captura:</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/auto_gps">
+      <label>Coordenadas do GPS</label>
+      <hint>&lt;br/&gt; &lt;h1&gt;Lembrete: se 'gravar localização' está levando muito tempo, por favor, verifique se a luz azul do seu Garmin Glo GPS está ligada&lt;/h1&gt;</hint>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/poi_dispute">
+      <label>Este ponto é ponto dum conflito ou disputa?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_A_pontos/dispute_type">
+      <label>Por favor, descreva o conflito ou disputa que existe neste ponto:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/poi_descriptor">
+      <label>Por favor, selecione o melhor descritor para este ponto:</label>
+      <item>
+        <label>Árvore</label>
+        <value>tree</value>
+      </item>
+      <item>
+        <label>Árvore com uma marca</label>
+        <value>tree_marked</value>
+      </item>
+      <item>
+        <label>Associação - Ponto de encontro</label>
+        <value>assoc_meet</value>
+      </item>
+      <item>
+        <label>Campo de futebol</label>
+        <value>football_field</value>
+      </item>
+      <item>
+        <label>Casa do regulo ou chefe</label>
+        <value>chief_house</value>
+      </item>
+      <item>
+        <label>Torre Celular</label>
+        <value>cell_tower</value>
+      </item>
+      <item>
+        <label>Cemitério</label>
+        <value>cemetery</value>
+      </item>
+      <item>
+        <label>Conflito</label>
+        <value>conflict</value>
+      </item>
+      <item>
+        <label>Ponto de controle</label>
+        <value>control</value>
+      </item>
+      <item>
+        <label>DUAT privado/titulado</label>
+        <value>duat</value>
+      </item>
+      <item>
+        <label>Escola</label>
+        <value>school</value>
+      </item>
+      <item>
+        <label>Estrada</label>
+        <value>road</value>
+      </item>
+      <item>
+        <label>Floresta comunal</label>
+        <value>forest</value>
+      </item>
+      <item>
+        <label>Furo de água</label>
+        <value>water_point</value>
+      </item>
+      <item>
+        <label>Igreja ou mesquita</label>
+        <value>religious</value>
+      </item>
+      <item>
+        <label>Limite reconhecido entre comunidades</label>
+        <value>boundary</value>
+      </item>
+      <item>
+        <label>Local sagrado</label>
+        <value>sacred</value>
+      </item>
+      <item>
+        <label>Machamba</label>
+        <value>field</value>
+      </item>
+      <item>
+        <label>Montanha</label>
+        <value>mountain</value>
+      </item>
+      <item>
+        <label>Monumento de cimento</label>
+        <value>concrete_marker</value>
+      </item>
+      <item>
+        <label>Passeio</label>
+        <value>pathway</value>
+      </item>
+      <item>
+        <label>Poço de água</label>
+        <value>well</value>
+      </item>
+      <item>
+        <label>Posto de Saúde</label>
+        <value>health_post</value>
+      </item>
+      <item>
+        <label>Reserva do Estado</label>
+        <value>state_reserve</value>
+      </item>
+      <item>
+        <label>Rio</label>
+        <value>river</value>
+      </item>
+      <item>
+        <label>Zona de interesse para fins de mapeamento</label>
+        <value>zone</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_A_pontos/poi_descriptor_alt">
+      <label>Por favor, descreva a outra descrição</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/river_name">
+      <label>Qual é o nome do rio?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/school_name">
+      <label>Qual é o nome da escola?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/religious_name">
+      <label>Qual é o nome da igreja?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/leader_name">
+      <label>Qual é o nome do líder que vive aqui?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/forest_name">
+      <label>Qual é o nome da floresta?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/mount_name">
+      <label>Qual é o nome da montanha?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/health_name">
+      <label>Qual é o nome do Posto de Saude?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/cem_name">
+      <label>Qual é o nome do cemitério?</label>
+    </input>
+    <input ref="/ILRG_ORAM_A_pontos/duat_name">
+      <label>Qual é o nome do dono de DUAT?</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/control_ref">
+      <label>Qual é o numero deste ponto de controle</label>
+      <item>
+        <label>P1</label>
+        <value>pc_1</value>
+      </item>
+      <item>
+        <label>P2</label>
+        <value>pc_2</value>
+      </item>
+      <item>
+        <label>P3</label>
+        <value>pc_3</value>
+      </item>
+      <item>
+        <label>P4</label>
+        <value>pc_4</value>
+      </item>
+      <item>
+        <label>P5</label>
+        <value>pc_5</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/desc_area">
+      <label>Qual é a descrição melhor desta área?</label>
+      <item>
+        <label>Floresta aberta</label>
+        <value>forest_open</value>
+      </item>
+      <item>
+        <label>Floresta densa</label>
+        <value>forest_dense</value>
+      </item>
+      <item>
+        <label>Zona Habitacional</label>
+        <value>residential</value>
+      </item>
+      <item>
+        <label>Machambas de zonas alta</label>
+        <value>fields_upland</value>
+      </item>
+      <item>
+        <label>Machambas de zonas baixa</label>
+        <value>fields_lowland</value>
+      </item>
+      <item>
+        <label>Matagal</label>
+        <value>bush</value>
+      </item>
+      <item>
+        <label>Zona Pantanosa</label>
+        <value>wetland</value>
+      </item>
+      <item>
+        <label>Zona de pastagem</label>
+        <value>grazing</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_A_pontos/desc_area_alt">
+      <label>Se for outra, descreve aqui:</label>
+    </input>
+    <select appearance="minimal" ref="/ILRG_ORAM_A_pontos/use_area">
+      <label>Quais são os usos principais nesta área?</label>
+      <item>
+        <label>Áreas sagradas</label>
+        <value>sacred</value>
+      </item>
+      <item>
+        <label>Agricultura</label>
+        <value>agric</value>
+      </item>
+      <item>
+        <label>Busca de mel</label>
+        <value>honey</value>
+      </item>
+      <item>
+        <label>Caça</label>
+        <value>hunting</value>
+      </item>
+      <item>
+        <label>Carvão</label>
+        <value>charcoal</value>
+      </item>
+      <item>
+        <label>Area de Conservação</label>
+        <value>reserve</value>
+      </item>
+      <item>
+        <label>Extração de barro</label>
+        <value>clay</value>
+      </item>
+      <item>
+        <label>Extração de capim</label>
+        <value>reeds</value>
+      </item>
+      <item>
+        <label>Extração de madeira</label>
+        <value>timber</value>
+      </item>
+      <item>
+        <label>Estacas</label>
+        <value>poles</value>
+      </item>
+      <item>
+        <label>Lenha</label>
+        <value>firewood</value>
+      </item>
+      <item>
+        <label>Medicamentos tradicionais</label>
+        <value>medicines</value>
+      </item>
+      <item>
+        <label>Recursos minerais</label>
+        <value>minerals</value>
+      </item>
+      <item>
+        <label>Reflorestamento</label>
+        <value>reforestation</value>
+      </item>
+      <item>
+        <label>Residencial</label>
+        <value>residential</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>other</value>
+      </item>
+    </select>
+    <select appearance="minimal" ref="/ILRG_ORAM_A_pontos/crop">
+      <label>O que se produz nesta área?</label>
+      <item>
+        <label>Algodão</label>
+        <value>cotton</value>
+      </item>
+      <item>
+        <label>Alho</label>
+        <value>garlic</value>
+      </item>
+      <item>
+        <label>Amendoim</label>
+        <value>groundnuts</value>
+      </item>
+      <item>
+        <label>Arroz</label>
+        <value>rice</value>
+      </item>
+      <item>
+        <label>Banana</label>
+        <value>banana</value>
+      </item>
+      <item>
+        <label>Batata</label>
+        <value>potato</value>
+      </item>
+      <item>
+        <label>Cana de açucar</label>
+        <value>sugarcane</value>
+      </item>
+      <item>
+        <label>Cebola</label>
+        <value>onion</value>
+      </item>
+      <item>
+        <label>Feijão Boer</label>
+        <value>boer_bean</value>
+      </item>
+      <item>
+        <label>Feijão Cute</label>
+        <value>cute_bean</value>
+      </item>
+      <item>
+        <label>Feijão Holoco</label>
+        <value>holoco_bean</value>
+      </item>
+      <item>
+        <label>Feijão Jogo</label>
+        <value>jogo_bean</value>
+      </item>
+      <item>
+        <label>Feijão Manteiga</label>
+        <value>butter_bean</value>
+      </item>
+      <item>
+        <label>Feijão Nhemba</label>
+        <value>nhemba_bean</value>
+      </item>
+      <item>
+        <label>Gergelim</label>
+        <value>sesame</value>
+      </item>
+      <item>
+        <label>Horticulturas</label>
+        <value>veg</value>
+      </item>
+      <item>
+        <label>Mandioca</label>
+        <value>cassava</value>
+      </item>
+      <item>
+        <label>Mapira</label>
+        <value>sorghum</value>
+      </item>
+      <item>
+        <label>Mexoera</label>
+        <value>millet</value>
+      </item>
+      <item>
+        <label>Milho</label>
+        <value>maize</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>other</value>
+      </item>
+    </select>
+    <input ref="/ILRG_ORAM_A_pontos/crop_alt">
+      <label>Se tem outra cultura, descreve aqui:</label>
+    </input>
+    <select1 ref="/ILRG_ORAM_A_pontos/houses">
+      <label>Existem casas nesta área?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_A_pontos/Ag3">
+      <label>Casas</label>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/Ag3/houses_dense">
+        <label>As casas nesta área estão dispersas ou agrupadas?</label>
+        <item>
+          <label>Dispersas</label>
+          <value>dis</value>
+        </item>
+        <item>
+          <label>Agrupadas</label>
+          <value>agr</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_A_pontos/Ag3/houses_type">
+        <label>Qual é o tipo das casas nesta área?</label>
+        <item>
+          <label>Permanente</label>
+          <value>perm</value>
+        </item>
+        <item>
+          <label>Palhotas temporárias</label>
+          <value>temp</value>
+        </item>
+      </select1>
+    </group>
+    <upload mediatype="image/*" ref="/ILRG_ORAM_A_pontos/poi_picture">
+      <label>Por favor, tire uma foto do ponto de interesse</label>
+    </upload>
+  </h:body>
+</h:html>
