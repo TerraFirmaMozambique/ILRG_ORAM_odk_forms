@@ -6,7 +6,7 @@
       <itext>
         <translation default="true()" lang="default">
           <text id="/ILRG_ORAM_C_limites/Cg1/logo:label">
-            <value form="image">jr://images/form_logo.jpg</value>
+            <value form="image">jr://images/oram_USAID.jpg</value>
           </text>
         </translation>
       </itext>
@@ -69,12 +69,11 @@
   </h:head>
   <h:body>
     <group appearance="field-list" ref="/ILRG_ORAM_C_limites/Cg1">
-      <label>Inicio</label>
       <input ref="/ILRG_ORAM_C_limites/Cg1/logo">
         <label ref="jr:itext('/ILRG_ORAM_C_limites/Cg1/logo:label')"/>
       </input>
       <input ref="/ILRG_ORAM_C_limites/Cg1/cavateco">
-        <label>&lt;br/&gt; &lt;h1&gt;A Cadeia de Valor de Terra Comunitária&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_C_limites/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_C_limites/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
       </input>
     </group>
     <input ref="/ILRG_ORAM_C_limites/intronote">
@@ -87,7 +86,7 @@ O técnico pode usar o formulário para capturar pontos durante uma caminhada da
 Por favor deslizar para a frente para continuar.</label>
     </input>
     <select1 ref="/ILRG_ORAM_C_limites/tec_name">
-      <label>&lt;h2&gt;Introduza o seu nome&lt;/h2&gt;&lt;br&gt;&lt;br&gt;Nome do(a) técnico(a):</label>
+      <label>Introduza o seu nome&lt;br&gt;Nome do(a) técnico(a):</label>
       <item>
         <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>

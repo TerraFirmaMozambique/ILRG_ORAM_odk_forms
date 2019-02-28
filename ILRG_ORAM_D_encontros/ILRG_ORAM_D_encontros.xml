@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM D - Encontros de Sensibilização</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_D_encontros/Dg1/logo:label">
+            <value form="image">jr://images/oram_USAID.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_D_encontros id="ILRG_ORAM_D" version="201902271">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Dg1>
+            <logo/>
+            <cavateco/>
+          </Dg1>
+          <intronote/>
+          <tec_name/>
+          <Dg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Dg2>
+          <date/>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <village_id/>
+          <Dg3>
+            <number_female/>
+            <number_male/>
+          </Dg3>
+          <gov_y_n/>
+          <gov_names/>
+          <gov_other/>
+          <meet_type/>
+          <meet_other/>
+          <themes/>
+          <themes_other/>
+          <Dg4>
+            <participate_men/>
+            <participate_women/>
+            <participate_youth/>
+            <participate_leader/>
+          </Dg4>
+          <meet_image/>
+          <point_meet/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_D_encontros>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_D_encontros/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_D_encontros/deviceid" type="string"/>
+      <bind calculate="&quot;Formulario D - Registo de Encontros de Sensibilização&quot;" nodeset="/ILRG_ORAM_D_encontros/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg2" relevant=" /ILRG_ORAM_D_encontros/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_D_encontros/Dg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_D_encontros/Dg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/post_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/village_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg3/number_female" required="true()" type="int"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg3/number_male" required="true()" type="int"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/gov_y_n" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/gov_names" relevant=" /ILRG_ORAM_D_encontros/gov_y_n  = 'yes'" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_D_encontros/gov_other" relevant="selected( /ILRG_ORAM_D_encontros/gov_names , 'other')" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/meet_type" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_D_encontros/meet_other" relevant=" /ILRG_ORAM_D_encontros/meet_type  = 'other'" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/themes" required="true()" type="select"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_D_encontros/themes_other" relevant="selected( /ILRG_ORAM_D_encontros/themes , 'other')" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg4/participate_men" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg4/participate_women" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg4/participate_youth" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/Dg4/participate_leader" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/meet_image" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_D_encontros/point_meet" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_D_encontros/obs" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_D_encontros/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_D_encontros/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('Meetings','_', /ILRG_ORAM_D_encontros/village_id ,'_', /ILRG_ORAM_D_encontros/date )" nodeset="/ILRG_ORAM_D_encontros/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_D_encontros/Dg1">
+      <input ref="/ILRG_ORAM_D_encontros/Dg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_D_encontros/Dg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_D_encontros/Dg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_D_encontros/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_D_encontros/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_D_encontros/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para capturar informação sobre os encontros iniciais com os povoados.
+
+Estes encontros podem ser com a liderança, ou com habitantes de povoados. Podem ser também encontros ao nível do posto administrativo ou distrito.
+
+O formulário deve ser preenchido cada vez que haja um encontro. 
+
+Os encontros podem envolver actividades de:
+
+- divulgação das legislações
+- descrição das actividades do Projecto
+- recolha de dados básicos
+- sensibilização sobre o processo de delimitação da área comunitária e demarcação de parcelas e emissão de declarações
+- sensibilização sobre a criação da associação comunitária
+- discussão sobre os investimentos, represas,
+
+O técnico pode usar o formulário para gravar informação sobre a data e lugar do encontro, o numero de participantes e os temas abordados.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/tec_name">
+      <label>Introduza o seu nome&lt;br&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Costa E Antonio</label>
+        <value>Costa_E_Antonio</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_D_encontros/Dg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_D_encontros/Dg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_D_encontros/Dg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_D_encontros/date">
+      <label>Data do encontro:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_ORAM_D_encontros/prov_id ]" ref="/ILRG_ORAM_D_encontros/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_D_encontros/dist_id ]" ref="/ILRG_ORAM_D_encontros/post_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('villages')/root/item[post_id= /ILRG_ORAM_D_encontros/post_id ]" ref="/ILRG_ORAM_D_encontros/village_id">
+      <label>Selecionar o povoado</label>
+    </input>
+    <group appearance="field-list" ref="/ILRG_ORAM_D_encontros/Dg3">
+      <label>Detalhes Participantes</label>
+      <input ref="/ILRG_ORAM_D_encontros/Dg3/number_female">
+        <label>Número de mulheres:</label>
+      </input>
+      <input ref="/ILRG_ORAM_D_encontros/Dg3/number_male">
+        <label>Número de homens:</label>
+      </input>
+    </group>
+    <select1 ref="/ILRG_ORAM_D_encontros/gov_y_n">
+      <label>Participaram representantes do governo?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <select appearance="minimal" ref="/ILRG_ORAM_D_encontros/gov_names">
+      <label>Instituição do governo representada:</label>
+      <item>
+        <label>Administração Distrital</label>
+        <value>district_admin</value>
+      </item>
+      <item>
+        <label>Autoridade Comunitária</label>
+        <value>community_rep</value>
+      </item>
+      <item>
+        <label>Chefe do Posto</label>
+        <value>post_admin</value>
+      </item>
+      <item>
+        <label>Presidente da Localidade</label>
+        <value>locality_admin</value>
+      </item>
+      <item>
+        <label>SDAE</label>
+        <value>sdae</value>
+      </item>
+      <item>
+        <label>SDPI</label>
+        <value>sdpi</value>
+      </item>
+      <item>
+        <label>Secretario do Bairro</label>
+        <value>bairro_admin</value>
+      </item>
+      <item>
+        <label>SPFFB</label>
+        <value>spffb</value>
+      </item>
+      <item>
+        <label>SPGC</label>
+        <value>spgc</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>other</value>
+      </item>
+    </select>
+    <input ref="/ILRG_ORAM_D_encontros/gov_other">
+      <label>Qual é a outra instituição do governo?</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/meet_type">
+      <label>Que tipo de encontro?</label>
+      <item>
+        <label>Encontro ao nível comunitário</label>
+        <value>meet_community</value>
+      </item>
+      <item>
+        <label>Encontro ao nível de povoado</label>
+        <value>meet_village</value>
+      </item>
+      <item>
+        <label>Encontro com liderança tradicional</label>
+        <value>meet_leaders</value>
+      </item>
+      <item>
+        <label>Encontro no Posto Administrativo</label>
+        <value>meet_post</value>
+      </item>
+      <item>
+        <label>Encontro no Distrito</label>
+        <value>meet_district</value>
+      </item>
+      <item>
+        <label>Encontro com comunidade vizinha</label>
+        <value>meet_neighbours</value>
+      </item>
+      <item>
+        <label>Outro tipo do encontro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_D_encontros/meet_other">
+      <label>Outro tipo de encontro?</label>
+    </input>
+    <select appearance="minimal" ref="/ILRG_ORAM_D_encontros/themes">
+      <label>Tema(s) ou assunto(s) abordado(s)?</label>
+      <item>
+        <label>Ambiente</label>
+        <value>environment</value>
+      </item>
+      <item>
+        <label>Apresentação do Projecto ILRG e programa das actividades</label>
+        <value>programme</value>
+      </item>
+      <item>
+        <label>Género e vulnerabilidade</label>
+        <value>gender</value>
+      </item>
+      <item>
+        <label>Quadro legal de Florestas</label>
+        <value>forestry_law</value>
+      </item>
+      <item>
+        <label>Quadro legal de Terras</label>
+        <value>land_law</value>
+      </item>
+      <item>
+        <label>Portucel e investimentos</label>
+        <value>investments</value>
+      </item>
+      <item>
+        <label>Processos envolvidos na delimitação de área da comunidade</label>
+        <value>delimitation_community</value>
+      </item>
+      <item>
+        <label>Processos envolvidos na delimitação de parcelas das famílias</label>
+        <value>delimitation_parcels</value>
+      </item>
+      <item>
+        <label>Processos envolvidos no estabelecimento da associação</label>
+        <value>association</value>
+      </item>
+      <item>
+        <label>Processos de reajustamento de ocupação terra</label>
+        <value>land_readjust</value>
+      </item>
+      <item>
+        <label>Gestão e uso da agua no regadio</label>
+        <value>water_use</value>
+      </item>
+      <item>
+        <label>Recolha ou confirmação de dados da comunidade/povoado</label>
+        <value>data_collect</value>
+      </item>
+      <item>
+        <label>Outro(s) temas</label>
+        <value>other</value>
+      </item>
+    </select>
+    <input ref="/ILRG_ORAM_D_encontros/themes_other">
+      <label>Outro(s) tema(s) ou assunto(s) abordados?</label>
+    </input>
+    <group appearance="field-list" ref="/ILRG_ORAM_D_encontros/Dg4">
+      <label>Participação</label>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/Dg4/participate_men">
+        <label>Como caracteriza o nível da participação pelos homens?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>v_high</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>high</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medium</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>low</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>v_low</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/Dg4/participate_women">
+        <label>Como caracteriza o nível da participação pelas mulheres?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>v_high</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>high</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medium</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>low</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>v_low</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/Dg4/participate_youth">
+        <label>Como caracteriza o nível da participação pelos jovens?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>v_high</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>high</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medium</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>low</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>v_low</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_D_encontros/Dg4/participate_leader">
+        <label>Como caracteriza o nível do apoio do líder?</label>
+        <item>
+          <label>Muito alto</label>
+          <value>v_high</value>
+        </item>
+        <item>
+          <label>Alto</label>
+          <value>high</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>medium</value>
+        </item>
+        <item>
+          <label>Fraco</label>
+          <value>low</value>
+        </item>
+        <item>
+          <label>Muito fraco</label>
+          <value>v_low</value>
+        </item>
+      </select1>
+    </group>
+    <upload mediatype="image/*" ref="/ILRG_ORAM_D_encontros/meet_image">
+      <label>Tire uma fotografia do encontro</label>
+    </upload>
+    <input ref="/ILRG_ORAM_D_encontros/point_meet">
+      <label>Capture das coordenadas GPS do encontro</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/ILRG_ORAM_D_encontros/obs">
+      <label>Observações sobre o encontro:</label>
+    </input>
+  </h:body>
+</h:html>
