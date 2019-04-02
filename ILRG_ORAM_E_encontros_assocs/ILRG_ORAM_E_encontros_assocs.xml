@@ -11,7 +11,7 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_E_encontros_assocs id="ILRG_ORAM_E" version="201902281">
+        <ILRG_ORAM_E_encontros_assocs id="ILRG_ORAM_E_V1" version="201904022">
           <start/>
           <deviceid/>
           <my_form_name/>
@@ -29,11 +29,7 @@
           <prov_id/>
           <dist_id/>
           <post_id/>
-          <village_num/>
-          <Villages_count/>
-          <Villages jr:template="">
-            <village_id/>
-          </Villages>
+          <village_id/>
           <Eg3>
             <number_female/>
             <number_male/>
@@ -75,9 +71,7 @@
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/prov_id" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/dist_id" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/post_id" required="true()" type="string"/>
-      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/village_num" type="int"/>
-      <bind calculate=" /ILRG_ORAM_E_encontros_assocs/village_num " nodeset="/ILRG_ORAM_E_encontros_assocs/Villages_count" readonly="true()" type="string"/>
-      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Villages/village_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/village_id" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg3/number_female" required="true()" type="int"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg3/number_male" required="true()" type="int"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/gov_y_n" required="true()" type="select1"/>
@@ -88,15 +82,15 @@
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/themes" required="true()" type="select"/>
       <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_E_encontros_assocs/themes_other" relevant="selected( /ILRG_ORAM_E_encontros_assocs/themes , 'other')" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg4/participate_men" required="true()" type="select1"/>
-      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg4/participate_women" type="select1"/>
-      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg4/participate_youth" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg4/participate_women" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg4/participate_youth" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/Eg4/participate_leader" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/meet_image" required="true()" type="binary"/>
       <bind nodeset="/ILRG_ORAM_E_encontros_assocs/point_meet" required="true()" type="geopoint"/>
       <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_E_encontros_assocs/obs" required="true()" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_E_encontros_assocs/end" type="dateTime"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_E_encontros_assocs/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat('Meetings_Assoc','_', /ILRG_ORAM_E_encontros_assocs/Villages/village_id ,'_', /ILRG_ORAM_E_encontros_assocs/date )" nodeset="/ILRG_ORAM_E_encontros_assocs/meta/instanceName" type="string"/>
+      <bind calculate="concat('Meetings_Assoc','_', /ILRG_ORAM_E_encontros_assocs/village_id ,'_', /ILRG_ORAM_E_encontros_assocs/date )" nodeset="/ILRG_ORAM_E_encontros_assocs/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -235,17 +229,9 @@ Por favor deslizar para a frente para continuar.</label>
     <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_E_encontros_assocs/dist_id ]" ref="/ILRG_ORAM_E_encontros_assocs/post_id">
       <label>Selecionar o posto administrativo</label>
     </input>
-    <input ref="/ILRG_ORAM_E_encontros_assocs/village_num">
-      <label>Quantos povoados foram representados no encontro?</label>
+    <input appearance="minimal" query="instance('villages')/root/item[post_id= /ILRG_ORAM_E_encontros_assocs/post_id ]" ref="/ILRG_ORAM_E_encontros_assocs/village_id">
+      <label>Selecionar o nome do povoado</label>
     </input>
-    <group ref="/ILRG_ORAM_E_encontros_assocs/Villages">
-      <label>Povoados no encontro</label>
-      <repeat jr:count=" /ILRG_ORAM_E_encontros_assocs/Villages_count " nodeset="/ILRG_ORAM_E_encontros_assocs/Villages">
-        <input query="instance('villages')/root/item[post_id= /ILRG_ORAM_E_encontros_assocs/post_id ]" ref="/ILRG_ORAM_E_encontros_assocs/Villages/village_id">
-          <label>Selecionar o nome do povoado</label>
-        </input>
-      </repeat>
-    </group>
     <group appearance="field-list" ref="/ILRG_ORAM_E_encontros_assocs/Eg3">
       <label>Detalhes Participantes</label>
       <input ref="/ILRG_ORAM_E_encontros_assocs/Eg3/number_female">

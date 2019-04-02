@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM F - Registo de Associação</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_F_registo_assocs/Fg1/logo:label">
+            <value form="image">jr://images/oram_USAID.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_F_registo_assocs id="ILRG_ORAM_F" version="201904012">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Fg1>
+            <logo/>
+            <cavateco/>
+          </Fg1>
+          <intronote/>
+          <tec_name/>
+          <Fg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Fg2>
+          <registration_date/>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <assoc_nome/>
+          <village_number/>
+          <Villages_count/>
+          <Villages jr:template="">
+            <Fg3>
+              <village_id/>
+              <village_families/>
+            </Fg3>
+          </Villages>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_F_registo_assocs>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_F_registo_assocs/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_F_registo_assocs/deviceid" type="string"/>
+      <bind calculate="&quot;Formulário F - Registo de Associação&quot;" nodeset="/ILRG_ORAM_F_registo_assocs/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/Fg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/Fg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/Fg2" relevant=" /ILRG_ORAM_F_registo_assocs/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_F_registo_assocs/Fg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_F_registo_assocs/Fg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/registration_date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/post_id" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,100}$&quot;)" nodeset="/ILRG_ORAM_F_registo_assocs/assoc_nome" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/village_number" type="int"/>
+      <bind calculate=" /ILRG_ORAM_F_registo_assocs/village_number " nodeset="/ILRG_ORAM_F_registo_assocs/Villages_count" readonly="true()" type="string"/>
+      <bind constraint="not(selected(join(' ',/repeat_other_Villages/Villages[./Fg3/village_id and position(.) != position(current()/../..)]/Fg3/village_id),.))" jr:constraintMsg="Povoado já foi selecionado antes" nodeset="/ILRG_ORAM_F_registo_assocs/Villages/Fg3/village_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_F_registo_assocs/Villages/Fg3/village_families" type="int"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_F_registo_assocs/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_F_registo_assocs/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('assoc_reg','_', /ILRG_ORAM_F_registo_assocs/post_id ,'_', /ILRG_ORAM_F_registo_assocs/registration_date )" nodeset="/ILRG_ORAM_F_registo_assocs/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_F_registo_assocs/Fg1">
+      <input ref="/ILRG_ORAM_F_registo_assocs/Fg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_F_registo_assocs/Fg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_F_registo_assocs/Fg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_F_registo_assocs/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_F_registo_assocs/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_F_registo_assocs/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para fazer o registo do nome duma associação comunitária e indicar os povoados que fazem parte desta associação.
+
+Um povoado sozinho podia optar para estabelecer uma associação, ou vários povoados podem se juntar.
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_F_registo_assocs/tec_name">
+      <label>Introduza o seu nome&lt;br&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Costa E Antonio</label>
+        <value>Costa_E_Antonio</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_F_registo_assocs/Fg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_F_registo_assocs/Fg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_F_registo_assocs/Fg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_F_registo_assocs/registration_date">
+      <label>Data:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_F_registo_assocs/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_ORAM_F_registo_assocs/prov_id ]" ref="/ILRG_ORAM_F_registo_assocs/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_F_registo_assocs/dist_id ]" ref="/ILRG_ORAM_F_registo_assocs/post_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input ref="/ILRG_ORAM_F_registo_assocs/assoc_nome">
+      <label>Qual é o nome (escolhido pelos membros) da Associação?</label>
+    </input>
+    <input ref="/ILRG_ORAM_F_registo_assocs/village_number">
+      <label>Quantos povoados decidirem fazer parte da associação?</label>
+    </input>
+    <group ref="/ILRG_ORAM_F_registo_assocs/Villages">
+      <label>Povoados que fazem parte da Associação</label>
+      <repeat jr:count=" /ILRG_ORAM_F_registo_assocs/Villages_count " nodeset="/ILRG_ORAM_F_registo_assocs/Villages">
+        <group ref="/ILRG_ORAM_F_registo_assocs/Villages/Fg3">
+          <input query="instance('villages')/root/item[post_id= /ILRG_ORAM_F_registo_assocs/post_id ]" ref="/ILRG_ORAM_F_registo_assocs/Villages/Fg3/village_id">
+            <label>Selecionar o nome do povoado</label>
+          </input>
+          <input appearance="numbers" ref="/ILRG_ORAM_F_registo_assocs/Villages/Fg3/village_families">
+            <label>Quantas famílias fazem parte deste povoado?</label>
+          </input>
+        </group>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
