@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM L - Mapas participativos</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_L_mapas/Lg1/logo:label">
+            <value form="image">jr://images/oram_USAID.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_L_mapas id="ILRG_ORAM_L" version="201904041">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Lg1>
+            <logo/>
+            <cavateco/>
+          </Lg1>
+          <intronote/>
+          <tec_name/>
+          <Lg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Lg2>
+          <date/>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <assoc_id/>
+          <map_number/>
+          <Maps_count/>
+          <Maps jr:template="">
+            <Lg3>
+              <map_author/>
+              <number_authors/>
+            </Lg3>
+            <map_image/>
+          </Maps>
+          <conflict/>
+          <conflict_description/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_L_mapas>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_L_mapas/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_L_mapas/deviceid" type="string"/>
+      <bind calculate="&quot;Formulário L - Mapas Participativos&quot;" nodeset="/ILRG_ORAM_L_mapas/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/Lg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/Lg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/Lg2" relevant=" /ILRG_ORAM_L_mapas/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_L_mapas/Lg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_L_mapas/Lg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/post_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/map_number" required="true()" type="int"/>
+      <bind calculate=" /ILRG_ORAM_L_mapas/map_number " nodeset="/ILRG_ORAM_L_mapas/Maps_count" readonly="true()" type="string"/>
+      <bind constraint="not(selected(join(' ',/repeat_other_Maps/Maps[./Lg3/map_author and position(.) != position(current()/../..)]/Lg3/map_author),.))" jr:constraintMsg="Grupo já foi selecionado antes" nodeset="/ILRG_ORAM_L_mapas/Maps/Lg3/map_author" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/Maps/Lg3/number_authors" required="true()" type="int"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/Maps/map_image" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_L_mapas/conflict" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,255}$&quot;)" nodeset="/ILRG_ORAM_L_mapas/conflict_description" relevant=" /ILRG_ORAM_L_mapas/conflict  = 'yes'" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_L_mapas/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_L_mapas/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('maps','_', /ILRG_ORAM_L_mapas/assoc_id )" nodeset="/ILRG_ORAM_L_mapas/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_L_mapas/Lg1">
+      <input ref="/ILRG_ORAM_L_mapas/Lg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_L_mapas/Lg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_L_mapas/Lg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_L_mapas/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_L_mapas/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_L_mapas/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é utilizado para enviar imagens dos mapas participativos. 
+
+O técnico pode usar o formulário para submeter as imagens e a informacao relecionada com os mapas participativos. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_L_mapas/tec_name">
+      <label>Introduza o seu nome&lt;br&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Costa E Antonio</label>
+        <value>Costa_E_Antonio</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_L_mapas/Lg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_L_mapas/Lg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_L_mapas/Lg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_L_mapas/date">
+      <label>Data da submissão de mapas:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_L_mapas/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_ORAM_L_mapas/prov_id ]" ref="/ILRG_ORAM_L_mapas/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_L_mapas/dist_id ]" ref="/ILRG_ORAM_L_mapas/post_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[post_id= /ILRG_ORAM_L_mapas/post_id ]" ref="/ILRG_ORAM_L_mapas/assoc_id">
+      <label>Selecionar a associação (o nome do povoado 'sede' aparece em parênteses)</label>
+    </input>
+    <input ref="/ILRG_ORAM_L_mapas/map_number">
+      <label>Quantos mapas participativos queria enviar?</label>
+    </input>
+    <group ref="/ILRG_ORAM_L_mapas/Maps">
+      <label>Mapas Participativos</label>
+      <repeat jr:count=" /ILRG_ORAM_L_mapas/Maps_count " nodeset="/ILRG_ORAM_L_mapas/Maps">
+        <group ref="/ILRG_ORAM_L_mapas/Maps/Lg3">
+          <select1 appearance="minimal" ref="/ILRG_ORAM_L_mapas/Maps/Lg3/map_author">
+            <label>Quem desenhou este mapa participativo?</label>
+            <item>
+              <label>Grupo de mulheres e homens</label>
+              <value>composite</value>
+            </item>
+            <item>
+              <label>Mulheres</label>
+              <value>female</value>
+            </item>
+            <item>
+              <label>Homens</label>
+              <value>male</value>
+            </item>
+            <item>
+              <label>Jovens</label>
+              <value>youth</value>
+            </item>
+          </select1>
+          <input appearance="numbers" ref="/ILRG_ORAM_L_mapas/Maps/Lg3/number_authors">
+            <label>Quantas pessoas participaram no desenho?</label>
+          </input>
+        </group>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_L_mapas/Maps/map_image">
+          <label>Tire uma fotografia do mapa participativo</label>
+        </upload>
+      </repeat>
+    </group>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_L_mapas/conflict">
+      <label>Existem quaisquer conflitos de terra entre povoados ou entre comunidades?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_L_mapas/conflict_description">
+      <label>Por favor, liste e descreva esses conflitos</label>
+    </input>
+  </h:body>
+</h:html>

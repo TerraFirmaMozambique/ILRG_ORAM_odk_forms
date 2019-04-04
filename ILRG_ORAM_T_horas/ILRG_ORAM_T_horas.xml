@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM T - Registo Horas</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_T_horas/Tg1/logo:label">
+            <value form="image">jr://images/oram_USAID.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_T_horas id="ILRG_ORAM_T" version="201904032">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Tg1>
+            <logo/>
+            <cavateco/>
+          </Tg1>
+          <intronote/>
+          <tec_name/>
+          <Tg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Tg2>
+          <date/>
+          <activity/>
+          <start_time/>
+          <end_time/>
+          <forms/>
+          <forms_number/>
+          <auto_gps/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_T_horas>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_T_horas/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_T_horas/deviceid" type="string"/>
+      <bind calculate="&quot;Formulário T - Registo de Horas&quot;" nodeset="/ILRG_ORAM_T_horas/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/Tg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/Tg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/Tg2" relevant=" /ILRG_ORAM_T_horas/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_T_horas/Tg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_T_horas/Tg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/activity" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/start_time" required="true()" type="time"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/end_time" required="true()" type="time"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/forms" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/forms_number" relevant=" /ILRG_ORAM_T_horas/forms ='yes'" required="true()" type="int"/>
+      <bind nodeset="/ILRG_ORAM_T_horas/auto_gps" required="true()" type="geopoint"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,510}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_T_horas/obs" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_T_horas/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_T_horas/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat( /ILRG_ORAM_T_horas/date ,'_', /ILRG_ORAM_T_horas/tec_name )" nodeset="/ILRG_ORAM_T_horas/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_T_horas/Tg1">
+      <input ref="/ILRG_ORAM_T_horas/Tg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_T_horas/Tg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_T_horas/Tg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_T_horas/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_T_horas/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_T_horas/my_form_name "/>&lt;/span&gt; &lt;br/&gt; Este formulário é utilizado para capturar informação sobre as actividades diárias dos enumeradores.
+
+O técnico pode usar o formulário para gravar informação sobre a data, tipo e duração de cada actividade. Quando se trata de mais do que uma actividade, deve ser submetido um formulário para cada actividade. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_T_horas/tec_name">
+      <label>Introduza o seu nome&lt;br&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Costa E Antonio</label>
+        <value>Costa_E_Antonio</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_T_horas/Tg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_T_horas/Tg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_T_horas/Tg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_T_horas/date">
+      <label>Data de registo:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_T_horas/activity">
+      <label>Tipo de actividade:</label>
+      <item>
+        <label>Sensibilização</label>
+        <value>sensitisation</value>
+      </item>
+      <item>
+        <label>Actividades de associativismo</label>
+        <value>assoc_activities</value>
+      </item>
+      <item>
+        <label>Identificação de limites de povoados</label>
+        <value>limits_village</value>
+      </item>
+      <item>
+        <label>Actividades de DRP (delimitação comunitária)</label>
+        <value>drp</value>
+      </item>
+      <item>
+        <label>Actividades de georeferenciamento e/ou devolução</label>
+        <value>georef_return</value>
+      </item>
+      <item>
+        <label>Plano de Uso de Terra</label>
+        <value>land_plans</value>
+      </item>
+      <item>
+        <label>Registo de pessoas</label>
+        <value>register_people</value>
+      </item>
+      <item>
+        <label>Registo de parcelas</label>
+        <value>register_parcels</value>
+      </item>
+      <item>
+        <label>Objecções e Correções</label>
+        <value>occ</value>
+      </item>
+      <item>
+        <label>Encontros ou outras actividades internos</label>
+        <value>internal</value>
+      </item>
+      <item>
+        <label>Outras</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_T_horas/start_time">
+      <label>Hora do inicio da actividade:</label>
+    </input>
+    <input ref="/ILRG_ORAM_T_horas/end_time">
+      <label>Hora do fim da actividade:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_T_horas/forms">
+      <label>Completou qualquer formulário do processo?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_T_horas/forms_number">
+      <label>Quantos formulários foram completados?</label>
+    </input>
+    <input ref="/ILRG_ORAM_T_horas/auto_gps">
+      <label>Captura das coordenadas GPS da actividade</label>
+      <hint>Lembrete: se a 'gravar localização' está levando algum tempo, por favor, verifique se a luz azul do seu Glo está ligada</hint>
+    </input>
+    <input ref="/ILRG_ORAM_T_horas/obs">
+      <label>Observações sobre a actividade:</label>
+    </input>
+  </h:body>
+</h:html>

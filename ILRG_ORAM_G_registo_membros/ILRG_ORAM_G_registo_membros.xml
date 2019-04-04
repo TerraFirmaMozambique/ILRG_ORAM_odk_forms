@@ -11,7 +11,7 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_G_registo_membros id="ILRG_ORAM_G" version="201904021">
+        <ILRG_ORAM_G_registo_membros id="ILRG_ORAM_G" version="201904031">
           <start/>
           <deviceid/>
           <my_form_name/>
@@ -34,9 +34,9 @@
           <Founders_count/>
           <Founders jr:template="">
             <Gg3>
-              <founder_family_name/>
-              <founder_given_name/>
-              <founder_gender/>
+              <family_name/>
+              <given_name/>
+              <gender/>
             </Gg3>
             <birthdate_y_n/>
             <birthdate/>
@@ -79,9 +79,9 @@
       <bind nodeset="/ILRG_ORAM_G_registo_membros/assoc_id" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_G_registo_membros/founder_number" required="true()" type="int"/>
       <bind calculate=" /ILRG_ORAM_G_registo_membros/founder_number " nodeset="/ILRG_ORAM_G_registo_membros/Founders_count" readonly="true()" type="string"/>
-      <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/Gg3/founder_family_name" required="true()" type="string"/>
-      <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/Gg3/founder_given_name" required="true()" type="string"/>
-      <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/Gg3/founder_gender" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/Gg3/family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/Gg3/given_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/Gg3/gender" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/birthdate_y_n" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/birthdate" relevant=" /ILRG_ORAM_G_registo_membros/Founders/birthdate_y_n  = 'yes'" type="date"/>
       <bind nodeset="/ILRG_ORAM_G_registo_membros/Founders/age_range" relevant=" /ILRG_ORAM_G_registo_membros/Founders/birthdate_y_n  = 'no'" type="select1"/>
@@ -248,15 +248,15 @@ Por favor deslizar para a frente para continuar.</label>
     <group ref="/ILRG_ORAM_G_registo_membros/Founders">
       <label>Membros fundadores</label>
       <repeat jr:count=" /ILRG_ORAM_G_registo_membros/Founders_count " nodeset="/ILRG_ORAM_G_registo_membros/Founders">
-        <group ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3">
+        <group appearance="field-list" ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3">
           <label>Detalhes de assinantes</label>
-          <input ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3/founder_family_name">
+          <input ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3/family_name">
             <label>Qual é o apelido da pessoa escolhida?</label>
           </input>
-          <input ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3/founder_given_name">
+          <input ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3/given_name">
             <label>Qual é o nome da pessoa escolhida?</label>
           </input>
-          <select1 appearance="minimal" ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3/founder_gender">
+          <select1 appearance="minimal" ref="/ILRG_ORAM_G_registo_membros/Founders/Gg3/gender">
             <label>Qual é o género da pessoa escolhida?</label>
             <item>
               <label>Masculino</label>
@@ -359,7 +359,7 @@ Por favor deslizar para a frente para continuar.</label>
             <label>Validade</label>
           </input>
           <select1 ref="/ILRG_ORAM_G_registo_membros/Founders/Gg4/id_permanent">
-            <label>Será que o BI é vitalício</label>
+            <label>Será que o BI é vitalício?</label>
             <item>
               <label>Sim</label>
               <value>yes</value>
