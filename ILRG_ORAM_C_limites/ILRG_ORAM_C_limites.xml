@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>ILRG ORAM C - Limites dos povoados</h:title>
+    <h:title>ILRG ORAM C - Limites dos Povoados</h:title>
     <model>
       <itext>
         <translation default="true()" lang="default">
@@ -11,7 +11,7 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_C_limites id="ILRG_ORAM_C" version="201902271">
+        <ILRG_ORAM_C_limites id="ILRG_ORAM_C" version="201904101">
           <start/>
           <deviceid/>
           <my_form_name/>
@@ -100,12 +100,44 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Artur_Afonso_Viegas</value>
       </item>
       <item>
+        <label>Bonefacio Basílio</label>
+        <value>Bonefacio_Basílio</value>
+      </item>
+      <item>
+        <label>Calisto Agostinho Inácio</label>
+        <value>Calisto_Agostinho_Inácio</value>
+      </item>
+      <item>
+        <label>Celestina Armando</label>
+        <value>Celestina_Armando</value>
+      </item>
+      <item>
+        <label>Celestina Joaquim Muanavava</label>
+        <value>Celestina_Joaquim_Muanavava</value>
+      </item>
+      <item>
         <label>Celestino Machaia Maia</label>
         <value>Celestino_Machaia_Maia</value>
       </item>
       <item>
+        <label>Constantino Jerónimo</label>
+        <value>Constantino_Jerónimo</value>
+      </item>
+      <item>
+        <label>Costa António</label>
+        <value>Costa_António</value>
+      </item>
+      <item>
         <label>Costa E Antonio</label>
         <value>Costa_E_Antonio</value>
+      </item>
+      <item>
+        <label>Damacio Feliciano</label>
+        <value>Damacio_Feliciano</value>
+      </item>
+      <item>
+        <label>Diosa Alberto</label>
+        <value>Diosa_Alberto</value>
       </item>
       <item>
         <label>Eulalia Pedro Candua</label>
@@ -128,12 +160,28 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Magaia_Armando</value>
       </item>
       <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Olinda Rui Muquelesse</label>
+        <value>Olinda_Rui_Muquelesse</value>
+      </item>
+      <item>
         <label>Onessimo A. Nepele</label>
         <value>Onessimo_A_Nepele</value>
       </item>
       <item>
         <label>Sadraque Franscisco</label>
         <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Xerife Gabriel</label>
+        <value>Xerife_Gabriel</value>
+      </item>
+      <item>
+        <label>Zito Afonso</label>
+        <value>Zito_Afonso</value>
       </item>
       <item>
         <label>Outro</label>
