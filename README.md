@@ -1,1 +1,1 @@
-# ILRG_ORAM_odk_forms
+This repository holds the ODK Collect Forms used to collect data on Mozambican communities that are delimiting and certifying their land rights through the Integrated Land & Resource Government programme.
