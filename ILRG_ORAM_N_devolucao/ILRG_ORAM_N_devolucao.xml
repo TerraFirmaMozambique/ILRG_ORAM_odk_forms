@@ -11,7 +11,7 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_N_devolucao id="ILRG_ORAM_N" version="201904191">
+        <ILRG_ORAM_N_devolucao id="ILRG_ORAM_N" version="201904192">
           <start/>
           <deviceid/>
           <my_form_name/>
@@ -116,7 +116,7 @@
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_N_devolucao/start" type="dateTime"/>
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_N_devolucao/deviceid" type="string"/>
-      <bind calculate="&quot;Formulário N - Cartograma&quot;" nodeset="/ILRG_ORAM_N_devolucao/my_form_name" type="string"/>
+      <bind calculate="&quot;Formulário N - Devolução&quot;" nodeset="/ILRG_ORAM_N_devolucao/my_form_name" type="string"/>
       <bind nodeset="/ILRG_ORAM_N_devolucao/Ng1/logo" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_N_devolucao/Ng1/cavateco" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_N_devolucao/intronote" readonly="true()" type="string"/>
