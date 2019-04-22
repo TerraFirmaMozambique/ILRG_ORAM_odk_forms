@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM W - Documentos</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_W_documentos/Wg1/logo:label">
+            <value form="image">jr://images/oram_USAID.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_W_documentos id="ILRG_ORAM_W" version="201904221">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Wg1>
+            <logo/>
+            <cavateco/>
+          </Wg1>
+          <intronote/>
+          <tec_name/>
+          <Wg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Wg2>
+          <Wg3>
+            <doc_tofrom/>
+            <date/>
+          </Wg3>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <assoc_id/>
+          <authority/>
+          <doc_type/>
+          <doc_link/>
+          <obs/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_W_documentos>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_W_documentos/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_W_documentos/deviceid" type="string"/>
+      <bind calculate="&quot;Formulário W - Registo de Documentos&quot;" nodeset="/ILRG_ORAM_W_documentos/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/Wg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/Wg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/Wg2" relevant=" /ILRG_ORAM_W_documentos/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_W_documentos/Wg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_W_documentos/Wg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/Wg3/doc_tofrom" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/Wg3/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/post_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/assoc_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/authority" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/doc_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_W_documentos/doc_link" required="true()" type="binary"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,1000}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_W_documentos/obs" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_W_documentos/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_W_documentos/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('documents','_', /ILRG_ORAM_W_documentos/Wg3/date ,'_', /ILRG_ORAM_W_documentos/assoc_id )" nodeset="/ILRG_ORAM_W_documentos/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_W_documentos/Wg1">
+      <input ref="/ILRG_ORAM_W_documentos/Wg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_W_documentos/Wg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_W_documentos/Wg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_W_documentos/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_W_documentos/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_W_documentos/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;Este formulário é usado para registrar um documento que é entregue às autoridades.
+
+Registra a data de entrega, uma descrição do documento, a quem foi entregue e inclui uma cópia do documento carimbado como tendo sido recebido.
+
+O formulário deve ser usado para registrar todos os documentos relevantes entregues à administração local, aos serviços cadastrais provinciais, ou quaisquer outros órgãos oficiais.
+
+Os documentos importantes incluem:
+
+- copias dos estatutos das associações, dispensados para aprovação
+- cópias de qualquer dos Formulários do Anexo Técnico, relativos à delimitação da terra da comunidade
+- cartas anexadas a qualquer dado entregue à administração
+
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_W_documentos/tec_name">
+      <label>Introduza o seu nome&lt;br&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Bonefacio Basílio</label>
+        <value>Bonefacio_Basílio</value>
+      </item>
+      <item>
+        <label>Calisto Agostinho Inácio</label>
+        <value>Calisto_Agostinho_Inácio</value>
+      </item>
+      <item>
+        <label>Celestina Armando</label>
+        <value>Celestina_Armando</value>
+      </item>
+      <item>
+        <label>Celestina Joaquim Muanavava</label>
+        <value>Celestina_Joaquim_Muanavava</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Constantino Jerónimo</label>
+        <value>Constantino_Jerónimo</value>
+      </item>
+      <item>
+        <label>Costa António</label>
+        <value>Costa_António</value>
+      </item>
+      <item>
+        <label>Damacio Feliciano</label>
+        <value>Damacio_Feliciano</value>
+      </item>
+      <item>
+        <label>Diosa Alberto</label>
+        <value>Diosa_Alberto</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Olinda Rui Muquelesse</label>
+        <value>Olinda_Rui_Muquelesse</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Xerife Gabriel</label>
+        <value>Xerife_Gabriel</value>
+      </item>
+      <item>
+        <label>Zito Afonso</label>
+        <value>Zito_Afonso</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_W_documentos/Wg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_W_documentos/Wg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_W_documentos/Wg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/ILRG_ORAM_W_documentos/Wg3">
+      <label>Detalhes do Documento:</label>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_W_documentos/Wg3/doc_tofrom">
+        <label>Este é um documento que foi apresentado ou recebido?</label>
+        <item>
+          <label>Documento apresentado</label>
+          <value>doc_sent</value>
+        </item>
+        <item>
+          <label>Documento recebido</label>
+          <value>doc_received</value>
+        </item>
+      </select1>
+      <input appearance="no-calendar" ref="/ILRG_ORAM_W_documentos/Wg3/date">
+        <label>Data de apresentação ou recepção do documento:</label>
+      </input>
+    </group>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_W_documentos/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_ORAM_W_documentos/prov_id ]" ref="/ILRG_ORAM_W_documentos/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_W_documentos/dist_id ]" ref="/ILRG_ORAM_W_documentos/post_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[post_id= /ILRG_ORAM_W_documentos/post_id ]" ref="/ILRG_ORAM_W_documentos/assoc_id">
+      <label>Selecionar a associação (o nome do povoado 'sede' aparece em parênteses)</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_W_documentos/authority">
+      <label>A quem foi apresentado ou de quem foi recebido?</label>
+      <item>
+        <label>Autoridade Tributaria</label>
+        <value>tax</value>
+      </item>
+      <item>
+        <label>Administração Distrital</label>
+        <value>district_admin</value>
+      </item>
+      <item>
+        <label>Associação Comunitária</label>
+        <value>assoc_com</value>
+      </item>
+      <item>
+        <label>Autoridade Comunitária (Regulo ou chefe tradicional)</label>
+        <value>trad_com</value>
+      </item>
+      <item>
+        <label>Chefe do Posto</label>
+        <value>post_admin</value>
+      </item>
+      <item>
+        <label>Presidente da Localidade</label>
+        <value>locality_admin</value>
+      </item>
+      <item>
+        <label>Serviços Distritais de Actividades Económicas</label>
+        <value>sdae</value>
+      </item>
+      <item>
+        <label>Serviços Distritais de Planificação e Infraestruturas</label>
+        <value>sdpi</value>
+      </item>
+      <item>
+        <label>Secretario do Bairro</label>
+        <value>bairro_admin</value>
+      </item>
+      <item>
+        <label>Serviços Provinciais de Florestas e Fauna Bravia</label>
+        <value>spffb</value>
+      </item>
+      <item>
+        <label>Serviços Provinciais de Geografia e Cadastro</label>
+        <value>spgc</value>
+      </item>
+      <item>
+        <label>Direcção Nacional de Terras</label>
+        <value>dinat</value>
+      </item>
+      <item>
+        <label>Direcção Provincial de Terras, Ambiente e Desenvolvimento Rural</label>
+        <value>dptadr</value>
+      </item>
+      <item>
+        <label>Presidente da Localidade</label>
+        <value>locality_admin</value>
+      </item>
+      <item>
+        <label>Imprensa Nacional</label>
+        <value>imp_nac</value>
+      </item>
+      <item>
+        <label>ORAM</label>
+        <value>oram</value>
+      </item>
+      <item>
+        <label>Terra Firma</label>
+        <value>terra_firma</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_W_documentos/doc_type">
+      <label>Que tipo de documento?</label>
+      <item>
+        <label>Apresentado: Dados e/ou mapas de DUATs familiares</label>
+        <value>map_lists_duats</value>
+      </item>
+      <item>
+        <label>Apresentado: Declarações de DUATs</label>
+        <value>declarations</value>
+      </item>
+      <item>
+        <label>Apresentado: Formulário 2 do Anexo Técnico</label>
+        <value>form_2</value>
+      </item>
+      <item>
+        <label>Apresentado: Formulário 5 do Anexo Técnico (devolução)</label>
+        <value>form_5</value>
+      </item>
+      <item>
+        <label>Apresentado: Identificação de membros fundadores duma Associação</label>
+        <value>ids</value>
+      </item>
+      <item>
+        <label>Apresentado: Mapas de área comunitária (delimitada)</label>
+        <value>map_delim</value>
+      </item>
+      <item>
+        <label>Apresentado: Mapas de Uso de Terra</label>
+        <value>map_lup</value>
+      </item>
+      <item>
+        <label>Apresentado: Pedido de despacho</label>
+        <value>approval_ask</value>
+      </item>
+      <item>
+        <label>Apresentado: Pedido de encontro</label>
+        <value>meeting</value>
+      </item>
+      <item>
+        <label>Apresentado: Pedido de prestação de serviços de Georeferenciamento</label>
+        <value>services_geo</value>
+      </item>
+      <item>
+        <label>Apresentado: Processo de Legalização da Associação (estatutos, regulamentos ou outros documentos)</label>
+        <value>assoc_form</value>
+      </item>
+      <item>
+        <label>Apresentado: Submissão ao BR (pedido de publicação de despacho e estatutos)</label>
+        <value>br_publish</value>
+      </item>
+      <item>
+        <label>Recebido: Títulos de DUATs</label>
+        <value>titles</value>
+      </item>
+      <item>
+        <label>Recebido: Certificado da delimitação comunitária</label>
+        <value>certificate</value>
+      </item>
+      <item>
+        <label>Recebido: Despacho do Governo Distrital</label>
+        <value>approval_receive</value>
+      </item>
+    </select1>
+    <upload mediatype="text/plain,application/pdf,application/vnd.ms-excel,application/msword,text/richtext,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip,application/x-zip,application/x-zip-compressed" ref="/ILRG_ORAM_W_documentos/doc_link">
+      <label>Escolha o ficheiro, em formato pdf, que tem copia do documento:</label>
+    </upload>
+    <input ref="/ILRG_ORAM_W_documentos/obs">
+      <label>Observações:</label>
+    </input>
+  </h:body>
+</h:html>
