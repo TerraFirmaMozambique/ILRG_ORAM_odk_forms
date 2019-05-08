@@ -1,0 +1,1639 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM P - Registrar Parcelas</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_ORAM_P_parcels/add_witnesses/photo_note_1:label">
+            <value form="image">jr://images/composite_faces.jpg</value>
+            <value>&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O enumerador deve assegurar que os fotos de pessoas aparecem com esta orientação e que as caras estão visíveis&lt;/span&gt; .
+
+Por favor deslizar para a frente para continuar.</value>
+          </text>
+          <text id="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_note:label">
+            <value form="image">jr://images/composite_id.jpg</value>
+            <value>&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O enumerador deve assegurar que a imagem do BI ocupa toda a ecrã, como mostrado em baixo.&lt;/span&gt; &lt;br/&gt;
+
+Por favor deslizar para a frente para continuar.</value>
+          </text>
+          <text id="/ILRG_ORAM_P_parcels/Pg1/logo:label">
+            <value form="image">jr://images/oram_usaid.jpg</value>
+          </text>
+          <text id="/ILRG_ORAM_P_parcels/add_rights_holders/photo_note:label">
+            <value form="image">jr://images/composite_faces.jpg</value>
+            <value>&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O enumerador deve assegurar que os fotos de pessoas aparecem com esta orientação e que as caras estão visíveis&lt;/span&gt;.
+
+Por favor deslizar para a frente para continuar.</value>
+          </text>
+          <text id="/ILRG_ORAM_P_parcels/add_witnesses/id_image_note_1:label">
+            <value form="image">jr://images/composite_id.jpg</value>
+            <value>&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O enumerador deve assegurar que a imagem do BI ocupa toda a ecrã, como mostrado em baixo.&lt;/span&gt; &lt;br/&gt;
+
+Por favor deslizar para a frente para continuar.</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_ORAM_P_parcels id="ILRG_ORAM_P" version="201905081">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Pg1>
+            <logo/>
+            <cavateco/>
+          </Pg1>
+          <intronote/>
+          <tec_name/>
+          <Pg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Pg2>
+          <date/>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <assoc_id/>
+          <receipt_id/>
+          <receipt_id_check/>
+          <occup_type/>
+          <norm_type/>
+          <zone_exclusion_y_n/>
+          <Pg3>
+            <zone_overlap/>
+            <zone_type/>
+          </Pg3>
+          <conflict_y_n/>
+          <Pg4>
+            <conflict_type/>
+            <conflict_description/>
+            <solved_y_n/>
+          </Pg4>
+          <Pg5>
+            <use_category/>
+            <uses/>
+            <use_prin/>
+          </Pg5>
+          <rights_holder_number/>
+          <right_holders_count/>
+          <right_holders jr:template="">
+            <searchtext/>
+            <right_holder/>
+            <party_role/>
+            <rep_relation/>
+          </right_holders>
+          <new_holder_y_n/>
+          <reg_new_holder_number/>
+          <add_rights_holders_count/>
+          <add_rights_holders jr:template="">
+            <Pg6>
+              <family_name/>
+              <given_name/>
+              <other_name/>
+              <mother_name/>
+              <father_name/>
+            </Pg6>
+            <Pg7>
+              <gender/>
+              <civil/>
+              <birthplace/>
+            </Pg7>
+            <birthdate_y_n/>
+            <birthdate/>
+            <age_range/>
+            <age_years/>
+            <note_age/>
+            <party_role_1/>
+            <rep_relation_1/>
+            <Pg8>
+              <id_document/>
+              <id_number/>
+              <id_place_issued/>
+              <id_date_issued/>
+              <id_date_validity/>
+              <id_permanent/>
+            </Pg8>
+            <nuit_y_n/>
+            <nuit/>
+            <photo_note/>
+            <photo/>
+            <signature/>
+            <id_image_note/>
+            <id_image_front/>
+            <id_image_back/>
+            <contact_tel/>
+            <contact_email/>
+          </add_rights_holders>
+          <witness_number/>
+          <witnesses_count/>
+          <witnesses jr:template="">
+            <searchtext_1/>
+            <witness/>
+            <witness_type/>
+          </witnesses>
+          <new_witness_y_n/>
+          <reg_new_witness_number/>
+          <add_witnesses_count/>
+          <add_witnesses jr:template="">
+            <Pg9>
+              <family_name_1/>
+              <given_name_1/>
+              <other_name_1/>
+              <mother_name_1/>
+              <father_name_1/>
+            </Pg9>
+            <Pg10>
+              <gender_1/>
+              <civil_1/>
+              <birthplace_1/>
+            </Pg10>
+            <birthdate_y_n_1/>
+            <birthdate_1/>
+            <age_range_1/>
+            <age_years_1/>
+            <note_age_1/>
+            <Pg11>
+              <id_document_1/>
+              <id_number_1/>
+              <id_place_issued_1/>
+              <id_date_issued_1/>
+              <id_date_validity_1/>
+              <id_permanent_1/>
+            </Pg11>
+            <nuit_y_n_1/>
+            <nuit_1/>
+            <photo_note_1/>
+            <photo_1/>
+            <signature_1/>
+            <id_image_note_1/>
+            <id_image_front_1/>
+            <id_image_back_1/>
+            <contact_tel_1/>
+            <contact_email_1/>
+            <witness_type/>
+          </add_witnesses>
+          <auto_gps/>
+          <limits_y_n/>
+          <Pontos jr:template="">
+            <auto_gps_limit/>
+            <upn_gps_limit/>
+          </Pontos>
+          <endnote/>
+          <receipt_image/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_ORAM_P_parcels>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_ORAM_P_parcels/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_ORAM_P_parcels/deviceid" type="string"/>
+      <bind calculate="&quot;Formulário P - Registo de Parcelas&quot;" nodeset="/ILRG_ORAM_P_parcels/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg2" relevant=" /ILRG_ORAM_P_parcels/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_P_parcels/Pg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_ORAM_P_parcels/Pg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/date" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/post_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/assoc_id" required="true()" type="string"/>
+      <bind constraint="regex(.,'[0-9]{6}')" nodeset="/ILRG_ORAM_P_parcels/receipt_id" required="true()" type="string"/>
+      <bind constraint=".= /ILRG_ORAM_P_parcels/receipt_id " jr:constraintMsg="O número do recibo que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/ILRG_ORAM_P_parcels/receipt_id_check" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/occup_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/norm_type" relevant=" /ILRG_ORAM_P_parcels/occup_type ='customary'" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/zone_exclusion_y_n" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg3" relevant=" /ILRG_ORAM_P_parcels/zone_exclusion_y_n = 'yes'"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg3/zone_overlap" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg3/zone_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/conflict_y_n" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg4" relevant=" /ILRG_ORAM_P_parcels/conflict_y_n = 'yes'"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg4/conflict_type" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,255}$&quot;)" jr:constraintMsg="Parágrafos não são permitidos. Por favor, eliminar quaisquer linhas extras." nodeset="/ILRG_ORAM_P_parcels/Pg4/conflict_description" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg4/solved_y_n" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg5/use_category" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg5/uses" required="true()" type="select"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pg5/use_prin" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/ILRG_ORAM_P_parcels/rights_holder_number" required="true()" type="int"/>
+      <bind calculate=" /ILRG_ORAM_P_parcels/rights_holder_number " nodeset="/ILRG_ORAM_P_parcels/right_holders_count" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/searchtext" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/right_holder" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/party_role" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/rep_relation" relevant=" /ILRG_ORAM_P_parcels/right_holders/party_role = 'representative_minor' or  /ILRG_ORAM_P_parcels/right_holders/party_role = 'representative_absent'" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/new_holder_y_n" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/ILRG_ORAM_P_parcels/reg_new_holder_number" relevant=" /ILRG_ORAM_P_parcels/new_holder_y_n = 'yes'" required="true()" type="int"/>
+      <bind calculate=" /ILRG_ORAM_P_parcels/reg_new_holder_number " nodeset="/ILRG_ORAM_P_parcels/add_rights_holders_count" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/given_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/other_name" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/mother_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/father_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7/gender" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7/civil" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de nacionalidade ou naturalidade não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7/birthplace" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/birthdate_y_n" required="true()" type="select1"/>
+      <bind constraint=". &lt; today()" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/birthdate" relevant=" /ILRG_ORAM_P_parcels/add_rights_holders/birthdate_y_n  = 'yes'" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/age_range" relevant=" /ILRG_ORAM_P_parcels/add_rights_holders/birthdate_y_n  = 'no'" required="true()" type="select1"/>
+      <bind calculate="int((today() -  /ILRG_ORAM_P_parcels/add_rights_holders/birthdate ) div 365.24)" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/age_years" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/note_age" readonly="true()" relevant=" /ILRG_ORAM_P_parcels/add_rights_holders/age_years &lt; 18 or  /ILRG_ORAM_P_parcels/add_rights_holders/age_range = 'minor'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/party_role_1" relevant=" /ILRG_ORAM_P_parcels/add_rights_holders/age_years &gt;= 18 or  /ILRG_ORAM_P_parcels/add_rights_holders/age_range = 'youth' or or  /ILRG_ORAM_P_parcels/add_rights_holders/age_range = 'adult' or  /ILRG_ORAM_P_parcels/add_rights_holders/age_range = 'elder'" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/rep_relation_1" relevant=" /ILRG_ORAM_P_parcels/add_rights_holders/party_role_1 = 'representative_minor' or  /ILRG_ORAM_P_parcels/add_rights_holders/party_role_1 = 'representative_absent'" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_document" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_number" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_place_issued" type="string"/>
+      <bind constraint=". &lt; today()" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_date_issued" type="date"/>
+      <bind constraint=". &gt; today()" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_date_validity" type="date"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_permanent" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/nuit_y_n" type="select1"/>
+      <bind constraint="regex(.,'[0-9]{9}')" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/nuit" relevant=" /ILRG_ORAM_P_parcels/add_rights_holders/nuit_y_n  = 'yes'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/photo_note" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/photo" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/signature" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_note" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_front" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_back" type="binary"/>
+      <bind constraint="regex(.,'[0-9]{9}')" jr:constraintMsg="O numero não está no formato correcto. Faça a favor de conferir" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/contact_tel" type="string"/>
+      <bind constraint="regex(., &quot;^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$&quot;)" jr:constraintMsg="O endereço não está no formato correcto. Faça a favor de conferir" nodeset="/ILRG_ORAM_P_parcels/add_rights_holders/contact_email" type="string"/>
+      <bind constraint=".&gt;=1" jr:constraintMsg="Tem que ter pelos menos uma testamunha" nodeset="/ILRG_ORAM_P_parcels/witness_number" required="true()" type="int"/>
+      <bind calculate=" /ILRG_ORAM_P_parcels/witness_number " nodeset="/ILRG_ORAM_P_parcels/witnesses_count" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/searchtext_1" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/witness" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/witness_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/new_witness_y_n" required="true()" type="select1"/>
+      <bind constraint=".&gt;0" nodeset="/ILRG_ORAM_P_parcels/reg_new_witness_number" relevant=" /ILRG_ORAM_P_parcels/new_witness_y_n = 'yes'" required="true()" type="int"/>
+      <bind calculate=" /ILRG_ORAM_P_parcels/reg_new_witness_number " nodeset="/ILRG_ORAM_P_parcels/add_witnesses_count" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/family_name_1" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/given_name_1" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/other_name_1" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/mother_name_1" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/father_name_1" required="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg10/gender_1" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg10/civil_1" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de nacionalidade ou naturalidade não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg10/birthplace_1" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/birthdate_y_n_1" required="true()" type="select1"/>
+      <bind constraint=". &lt; today()" nodeset="/ILRG_ORAM_P_parcels/add_witnesses/birthdate_1" relevant=" /ILRG_ORAM_P_parcels/add_witnesses/birthdate_y_n_1  = 'yes'" required="true()" type="date"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/age_range_1" relevant=" /ILRG_ORAM_P_parcels/add_witnesses/birthdate_y_n_1  = 'no'" required="true()" type="select1"/>
+      <bind calculate="int((today() -  /ILRG_ORAM_P_parcels/add_witnesses/birthdate_1 ) div 365.24)" nodeset="/ILRG_ORAM_P_parcels/add_witnesses/age_years_1" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/note_age_1" readonly="true()" relevant=" /ILRG_ORAM_P_parcels/add_witnesses/age_years_1 &lt; 18 or  /ILRG_ORAM_P_parcels/add_witnesses/age_range_1 = 'minor'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_document_1" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_number_1" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_place_issued_1" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_date_issued_1" type="date"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_date_validity_1" type="date"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_permanent_1" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/nuit_y_n_1" type="select1"/>
+      <bind constraint="regex(.,'[0-9]{9}')" nodeset="/ILRG_ORAM_P_parcels/add_witnesses/nuit_1" relevant=" /ILRG_ORAM_P_parcels/add_witnesses/nuit_y_n_1  = 'yes'" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/photo_note_1" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/photo_1" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/signature_1" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/id_image_note_1" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/id_image_front_1" required="true()" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/id_image_back_1" type="binary"/>
+      <bind constraint="regex(.,'[0-9]{9}')" jr:constraintMsg="O numero não está no formato correcto. Faça a favor de conferir" nodeset="/ILRG_ORAM_P_parcels/add_witnesses/contact_tel_1" type="string"/>
+      <bind constraint="regex(., &quot;^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$&quot;)" jr:constraintMsg="O endereço não está no formato correcto. Faça a favor de conferir" nodeset="/ILRG_ORAM_P_parcels/add_witnesses/contact_email_1" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/add_witnesses/witness_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/auto_gps" required="true()" type="geopoint"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/limits_y_n" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pontos" relevant=" /ILRG_ORAM_P_parcels/limits_y_n = 'yes'"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/Pontos/auto_gps_limit" required="true()" type="geopoint"/>
+      <bind calculate="concat( /ILRG_ORAM_P_parcels/receipt_id ,'point')" nodeset="/ILRG_ORAM_P_parcels/Pontos/upn_gps_limit" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/endnote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/receipt_image" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_P_parcels/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_ORAM_P_parcels/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('parcelas','_', /ILRG_ORAM_P_parcels/assoc_id ,'_', /ILRG_ORAM_P_parcels/receipt_id )" nodeset="/ILRG_ORAM_P_parcels/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/Pg1">
+      <input ref="/ILRG_ORAM_P_parcels/Pg1/logo">
+        <label ref="jr:itext('/ILRG_ORAM_P_parcels/Pg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_ORAM_P_parcels/Pg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_P_parcels/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_ORAM_P_parcels/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_ORAM_P_parcels/my_form_name "/>&lt;/span&gt; &lt;br/&gt; 
+
+Este formulário é utilizado para identificar as parcelas que serão certificadas pela associação. 
+
+O técnico pode usar o formulário para fazer registo da parcela no campo: a forma de obtenção, o uso, os limites e o(s) titular(es) e testemunhas.
+
+O(s) nome(s) do(s) titular(es) e testemunhas podem ser selecionados duma lista de pessoas que já foram registados. Se aparecem novas pessoas como titulares ou testemunhas, os nomes e detalhes deles podem ser adicionados utilizando este mesmo formulário.
+
+Está permitido a demarcação/identificação das parcelas por pessoas que não são os proprietários, quando estes estão ausentes. Mas o formulário sempre exige a captura do(s) nome(s) dos próprios proprietários (titulares). 
+
+O formulário é usado junto com os mapas para identificar os limites de parcela. Os limites devem ser indicados no mapa, e o formulário também permite a gravação das coordenadas geográficas dos limites, quando necessário. 
+
+No fim do formulário, o técnico deve preencher um recibo, tirar uma imagem do recibo, e entregar lo ao titular. 
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/tec_name">
+      <label>Introduza o seu nome&lt;br/&gt;&lt;br/&gt;Nome do(a) técnico(a):</label>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Bonefacio Basílio</label>
+        <value>Bonefacio_Basílio</value>
+      </item>
+      <item>
+        <label>Calisto Agostinho Inácio</label>
+        <value>Calisto_Agostinho_Inácio</value>
+      </item>
+      <item>
+        <label>Celestina Armando</label>
+        <value>Celestina_Armando</value>
+      </item>
+      <item>
+        <label>Celestina Joaquim Muanavava</label>
+        <value>Celestina_Joaquim_Muanavava</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Constantino Jerónimo</label>
+        <value>Constantino_Jerónimo</value>
+      </item>
+      <item>
+        <label>Costa António</label>
+        <value>Costa_António</value>
+      </item>
+      <item>
+        <label>Damacio Feliciano</label>
+        <value>Damacio_Feliciano</value>
+      </item>
+      <item>
+        <label>Diosa Alberto</label>
+        <value>Diosa_Alberto</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Olinda Rui Muquelesse</label>
+        <value>Olinda_Rui_Muquelesse</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Xerife Gabriel</label>
+        <value>Xerife_Gabriel</value>
+      </item>
+      <item>
+        <label>Zito Afonso</label>
+        <value>Zito_Afonso</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/Pg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_ORAM_P_parcels/Pg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_ORAM_P_parcels/Pg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/date">
+      <label>Data do registo de parcela:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/prov_id">
+      <label>Selecionar a província:</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_ORAM_P_parcels/prov_id ]" ref="/ILRG_ORAM_P_parcels/dist_id">
+      <label>Selecionar o distrito:</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_ORAM_P_parcels/dist_id ]" ref="/ILRG_ORAM_P_parcels/post_id">
+      <label>Selecionar o posto administrativo:</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[post_id= /ILRG_ORAM_P_parcels/post_id ]" ref="/ILRG_ORAM_P_parcels/assoc_id">
+      <label>Selecionar a associação:</label>
+    </input>
+    <input appearance="numbers" ref="/ILRG_ORAM_P_parcels/receipt_id">
+      <label>Qual é o numero do recibo?</label>
+    </input>
+    <input appearance="numbers" ref="/ILRG_ORAM_P_parcels/receipt_id_check">
+      <label>Por favor, re-digite o número do recibo como confirmação:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/occup_type">
+      <label>Qual é a origem do DUAT?</label>
+      <item>
+        <label>Ocupação de boa fé (pelo menos 10 anos)</label>
+        <value>good_faith</value>
+      </item>
+      <item>
+        <label>Atraves de Normas e Práticas Costumeiras</label>
+        <value>customary</value>
+      </item>
+      <item>
+        <label>Reassentamento</label>
+        <value>resettlement</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/norm_type">
+      <label>Sendo através de normas e práticas costumeiras, qual foi a forma de obtenção da parcela?</label>
+      <item>
+        <label>Através do Regulo ou autoridade tradicional</label>
+        <value>traditional</value>
+      </item>
+      <item>
+        <label>Doação de alguém</label>
+        <value>donation</value>
+      </item>
+      <item>
+        <label>Herança da família</label>
+        <value>inheritance</value>
+      </item>
+      <item>
+        <label>Compra de Benfeitorias</label>
+        <value>purchase</value>
+      </item>
+      <item>
+        <label>Transmissão</label>
+        <value>transfer</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/zone_exclusion_y_n">
+      <label>A parcela está localizada numa zona de exclusão?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/Pg3">
+      <label>Detalhes de zona</label>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg3/zone_overlap">
+        <label>É apenas uma parte da parcela dentro da zona de exclusão ou toda a parcela?</label>
+        <item>
+          <label>Parcialmente dentro</label>
+          <value>partial</value>
+        </item>
+        <item>
+          <label>Totalmente dentro</label>
+          <value>total</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg3/zone_type">
+        <label>Que tipo de zona de exclusão?</label>
+        <item>
+          <label>Protecção Parcial</label>
+          <value>partial</value>
+        </item>
+        <item>
+          <label>Protecção Total</label>
+          <value>total</value>
+        </item>
+        <item>
+          <label>Zona de Inundação</label>
+          <value>flood</value>
+        </item>
+        <item>
+          <label>Zona de Erosão</label>
+          <value>erosion</value>
+        </item>
+      </select1>
+    </group>
+    <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/conflict_y_n">
+      <label>Existe ou existia um conflito ou disputa sobre a parcela?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/Pg4">
+      <label>Detalhes de conflito ou disputa</label>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg4/conflict_type">
+        <label>Que tipo de conflito ou disputa?</label>
+        <item>
+          <label>Trespasse</label>
+          <value>transfer</value>
+        </item>
+        <item>
+          <label>Titularidade</label>
+          <value>title</value>
+        </item>
+        <item>
+          <label>Limites</label>
+          <value>limits</value>
+        </item>
+        <item>
+          <label>Acesso</label>
+          <value>access</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/ILRG_ORAM_P_parcels/Pg4/conflict_description">
+        <label>Breve descrição de conflito ou disputa:</label>
+      </input>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg4/solved_y_n">
+        <label>O conflito ou disputa sobre a parcela está resolvido?</label>
+        <item>
+          <label>Sim</label>
+          <value>yes</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/Pg5">
+      <label>Detalhes de uso</label>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg5/use_category">
+        <label>Forma de uso:</label>
+        <item>
+          <label>Exploração Familiar</label>
+          <value>family_use</value>
+        </item>
+        <item>
+          <label>Exploração Comercial</label>
+          <value>commercial_use</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>other</value>
+        </item>
+      </select1>
+      <select appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg5/uses">
+        <label>Usos:</label>
+        <item>
+          <label>Agricultura</label>
+          <value>cropping</value>
+        </item>
+        <item>
+          <label>Agropecuária</label>
+          <value>mixed_farming</value>
+        </item>
+        <item>
+          <label>Comércio/Industria/Serviços</label>
+          <value>commercial</value>
+        </item>
+        <item>
+          <label>Culturas Permanentes</label>
+          <value>permanent_crop</value>
+        </item>
+        <item>
+          <label>Fins Comunitários</label>
+          <value>community</value>
+        </item>
+        <item>
+          <label>Fins Sociais/Religiosos</label>
+          <value>social</value>
+        </item>
+        <item>
+          <label>Habitação Propria</label>
+          <value>residential</value>
+        </item>
+        <item>
+          <label>Habitação Veraneio</label>
+          <value>residential_holiday</value>
+        </item>
+        <item>
+          <label>Habitação e Comercio</label>
+          <value>residential_commercial</value>
+        </item>
+        <item>
+          <label>Pecuária Gado Bovino</label>
+          <value>cattle_rearing</value>
+        </item>
+        <item>
+          <label>Pecuária Outro</label>
+          <value>other_livestock</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>other</value>
+        </item>
+      </select>
+      <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/Pg5/use_prin">
+        <label>Qual é o uso principal?</label>
+        <item>
+          <label>Agricultura</label>
+          <value>cropping</value>
+        </item>
+        <item>
+          <label>Agropecuária</label>
+          <value>mixed_farming</value>
+        </item>
+        <item>
+          <label>Comércio/Industria/Serviços</label>
+          <value>commercial</value>
+        </item>
+        <item>
+          <label>Culturas Permanentes</label>
+          <value>permanent_crop</value>
+        </item>
+        <item>
+          <label>Fins Comunitários</label>
+          <value>community</value>
+        </item>
+        <item>
+          <label>Fins Sociais/Religiosos</label>
+          <value>social</value>
+        </item>
+        <item>
+          <label>Habitação Propria</label>
+          <value>residential</value>
+        </item>
+        <item>
+          <label>Habitação Veraneio</label>
+          <value>residential_holiday</value>
+        </item>
+        <item>
+          <label>Habitação e Comercio</label>
+          <value>residential_commercial</value>
+        </item>
+        <item>
+          <label>Pecuária Gado Bovino</label>
+          <value>cattle_rearing</value>
+        </item>
+        <item>
+          <label>Pecuária Outro</label>
+          <value>other_livestock</value>
+        </item>
+        <item>
+          <label>Outro</label>
+          <value>other</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/ILRG_ORAM_P_parcels/rights_holder_number">
+      <label>Quantos titulares tem a parcela? Se for apenas uma pessoa, digite '1'</label>
+    </input>
+    <group ref="/ILRG_ORAM_P_parcels/right_holders">
+      <label>Titulares</label>
+      <repeat jr:count=" /ILRG_ORAM_P_parcels/right_holders_count " nodeset="/ILRG_ORAM_P_parcels/right_holders">
+        <input ref="/ILRG_ORAM_P_parcels/right_holders/searchtext">
+          <label>Titulares - digite as primeiras letras do nome a ser pesquisada da lista de pessoas já registadas:</label>
+        </input>
+        <select1 appearance="search( /ILRG_ORAM_P_parcels/assoc_id , 'startswith', 'party_name',  /ILRG_ORAM_P_parcels/right_holders/searchtext )" ref="/ILRG_ORAM_P_parcels/right_holders/right_holder">
+          <label>Selecionar o nome do titular:</label>
+          <item>
+            <label>party_name</label>
+            <value>party_id_key</value>
+          </item>
+          <item>
+            <label>Outro nome (não está na lista)</label>
+            <value>1</value>
+          </item>
+        </select1>
+        <select1 ref="/ILRG_ORAM_P_parcels/right_holders/party_role">
+          <label>Esta pessoa é o titular, ou o(a) representante duma pessoa menor, ou representante duma pessoa ausente?</label>
+          <item>
+            <label>Titular</label>
+            <value>right_holder</value>
+          </item>
+          <item>
+            <label>Representante duma pessoa menor</label>
+            <value>representative_minor</value>
+          </item>
+          <item>
+            <label>Representante duma pessoa ausente</label>
+            <value>representative_absent</value>
+          </item>
+        </select1>
+        <select1 ref="/ILRG_ORAM_P_parcels/right_holders/rep_relation">
+          <label>Relação com o titular:</label>
+          <item>
+            <label>Administrador</label>
+            <value>administrator</value>
+          </item>
+          <item>
+            <label>Administrador delegado</label>
+            <value>administrator_designate</value>
+          </item>
+          <item>
+            <label>Advogado</label>
+            <value>lawyer</value>
+          </item>
+          <item>
+            <label>Amigo(a)</label>
+            <value>friend</value>
+          </item>
+          <item>
+            <label>Avo(avó)</label>
+            <value>grandparent</value>
+          </item>
+          <item>
+            <label>Cunhado(a)</label>
+            <value>brother_in_law</value>
+          </item>
+          <item>
+            <label>Diretor geral</label>
+            <value>director_general</value>
+          </item>
+          <item>
+            <label>Empregado(a)</label>
+            <value>employee</value>
+          </item>
+          <item>
+            <label>Enteado(a)</label>
+            <value>stepson</value>
+          </item>
+          <item>
+            <label>Esposo(a)</label>
+            <value>husband</value>
+          </item>
+          <item>
+            <label>Filho(a)</label>
+            <value>son</value>
+          </item>
+          <item>
+            <label>Genro(Nora)</label>
+            <value>son_in_law</value>
+          </item>
+          <item>
+            <label>Gerente</label>
+            <value>manager</value>
+          </item>
+          <item>
+            <label>Guarda</label>
+            <value>guard</value>
+          </item>
+          <item>
+            <label>Inquilino(a)</label>
+            <value>tenant</value>
+          </item>
+          <item>
+            <label>Irmã(o)</label>
+            <value>brother</value>
+          </item>
+          <item>
+            <label>Madrasta</label>
+            <value>stepmother</value>
+          </item>
+          <item>
+            <label>Mãe</label>
+            <value>mother</value>
+          </item>
+          <item>
+            <label>Membro</label>
+            <value>member</value>
+          </item>
+          <item>
+            <label>Neto(a)</label>
+            <value>grandson</value>
+          </item>
+          <item>
+            <label>Padrasto</label>
+            <value>stepfather</value>
+          </item>
+          <item>
+            <label>Pai</label>
+            <value>father</value>
+          </item>
+          <item>
+            <label>PCA</label>
+            <value>pca</value>
+          </item>
+          <item>
+            <label>Presidente</label>
+            <value>president</value>
+          </item>
+          <item>
+            <label>Primo(a)</label>
+            <value>cousin</value>
+          </item>
+          <item>
+            <label>Representante legal</label>
+            <value>legal_rep</value>
+          </item>
+          <item>
+            <label>Sobrinho(a)</label>
+            <value>nephew</value>
+          </item>
+          <item>
+            <label>Socio(a)</label>
+            <value>partner</value>
+          </item>
+          <item>
+            <label>Sogro(a)</label>
+            <value>father_in_law</value>
+          </item>
+          <item>
+            <label>Tio(a)</label>
+            <value>uncle</value>
+          </item>
+          <item>
+            <label>Trabalhador(a)</label>
+            <value>worker</value>
+          </item>
+          <item>
+            <label>Tutor de menor</label>
+            <value>tutor</value>
+          </item>
+          <item>
+            <label>Vice Presidente</label>
+            <value>vice_president</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>other</value>
+          </item>
+        </select1>
+      </repeat>
+    </group>
+    <select1 ref="/ILRG_ORAM_P_parcels/new_holder_y_n">
+      <label>Quer fazer registo dum(a) titular da parcela, ou representante, cujo nome não apareceu na lista?
+
+&lt;span style=&quot;color:#FF0000&quot;&gt;Se não for encontrado nenhum dos nomes dos titulares, TEM QUE RESPONDER 'SIM', E FAZER O REGISTO DE PELO MENOS UM NOME AQUI!!&lt;/span&gt;</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_P_parcels/reg_new_holder_number">
+      <label>Quantos pessoas ainda não registadas são? Se for apenas uma pessoa, digite '1'</label>
+    </input>
+    <group ref="/ILRG_ORAM_P_parcels/add_rights_holders">
+      <label>Novos Titulares</label>
+      <repeat jr:count=" /ILRG_ORAM_P_parcels/add_rights_holders_count " nodeset="/ILRG_ORAM_P_parcels/add_rights_holders">
+        <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6">
+          <label>Nomes de pessoa e familiares</label>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/family_name">
+            <label>Qual é o apelido da pessoa?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/given_name">
+            <label>Qual é o nome da pessoa?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/other_name">
+            <label>Qual é a outro nome da pessoa, se tiver?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/mother_name">
+            <label>Qual é o nome completo da mãe da pessoa?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg6/father_name">
+            <label>Qual é o nome completo do pai da pessoa?</label>
+          </input>
+        </group>
+        <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7">
+          <label>Detalhes de pessoa</label>
+          <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7/gender">
+            <label>Qual é o género da pessoa?</label>
+            <item>
+              <label>Masculino</label>
+              <value>male</value>
+            </item>
+            <item>
+              <label>Feminino</label>
+              <value>female</value>
+            </item>
+          </select1>
+          <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7/civil">
+            <label>Escolhe o estado civil da pessoa:</label>
+            <item>
+              <label>Solteiro (a)</label>
+              <value>single</value>
+            </item>
+            <item>
+              <label>União de Facto</label>
+              <value>de_facto_union</value>
+            </item>
+            <item>
+              <label>Casado (a)</label>
+              <value>married</value>
+            </item>
+            <item>
+              <label>Divorciado (a)</label>
+              <value>divorced</value>
+            </item>
+            <item>
+              <label>Viúvo (a)</label>
+              <value>widowed</value>
+            </item>
+          </select1>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg7/birthplace">
+            <label>Qual é a naturalidade da pessoa?</label>
+          </input>
+        </group>
+        <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_rights_holders/birthdate_y_n">
+          <label>A pessoa conhece a data de nascimento ou a data está disponível através do documento?</label>
+          <item>
+            <label>Sim</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/add_rights_holders/birthdate">
+          <label>Data de nascimento:</label>
+        </input>
+        <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_rights_holders/age_range">
+          <label>Qual é a idade da pessoa?</label>
+          <item>
+            <label>Menos de 18 anos</label>
+            <value>minor</value>
+          </item>
+          <item>
+            <label>Entre 18 - 30 anos</label>
+            <value>youth</value>
+          </item>
+          <item>
+            <label>Entre 30 - 50 anos</label>
+            <value>adult</value>
+          </item>
+          <item>
+            <label>50+ anos</label>
+            <value>elder</value>
+          </item>
+        </select1>
+        <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/note_age">
+          <label>A pessoa possui <output value=" /ILRG_ORAM_P_parcels/add_rights_holders/age_years "/> anos, ou menos de 18 anos. &lt;br/&gt;&lt;br/&gt;Esta pessoa não pode adquirir um DUAT, porque ainda é menor.&lt;br/&gt;&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O(A) enumerador pode continuar a fazer o registo desta pessoa menor, mas deve também fazer registo duma outra pessoa, maior de que 18 anos, que pode actuar como representante para fins de registo de parcela. 
+
+A outra pessoa pode ser registada através deste formulário.&lt;/span&gt;</label>
+        </input>
+        <select1 ref="/ILRG_ORAM_P_parcels/add_rights_holders/party_role_1">
+          <label>Esta pessoa é o titular, ou o(a) representante duma pessoa menor, ou representante duma pessoa ausente?</label>
+          <item>
+            <label>Titular</label>
+            <value>right_holder</value>
+          </item>
+          <item>
+            <label>Representante duma pessoa menor</label>
+            <value>representative_minor</value>
+          </item>
+          <item>
+            <label>Representante duma pessoa ausente</label>
+            <value>representative_absent</value>
+          </item>
+        </select1>
+        <select1 ref="/ILRG_ORAM_P_parcels/add_rights_holders/rep_relation_1">
+          <label>Relação com o titular:</label>
+          <item>
+            <label>Administrador</label>
+            <value>administrator</value>
+          </item>
+          <item>
+            <label>Administrador delegado</label>
+            <value>administrator_designate</value>
+          </item>
+          <item>
+            <label>Advogado</label>
+            <value>lawyer</value>
+          </item>
+          <item>
+            <label>Amigo(a)</label>
+            <value>friend</value>
+          </item>
+          <item>
+            <label>Avo(avó)</label>
+            <value>grandparent</value>
+          </item>
+          <item>
+            <label>Cunhado(a)</label>
+            <value>brother_in_law</value>
+          </item>
+          <item>
+            <label>Diretor geral</label>
+            <value>director_general</value>
+          </item>
+          <item>
+            <label>Empregado(a)</label>
+            <value>employee</value>
+          </item>
+          <item>
+            <label>Enteado(a)</label>
+            <value>stepson</value>
+          </item>
+          <item>
+            <label>Esposo(a)</label>
+            <value>husband</value>
+          </item>
+          <item>
+            <label>Filho(a)</label>
+            <value>son</value>
+          </item>
+          <item>
+            <label>Genro(Nora)</label>
+            <value>son_in_law</value>
+          </item>
+          <item>
+            <label>Gerente</label>
+            <value>manager</value>
+          </item>
+          <item>
+            <label>Guarda</label>
+            <value>guard</value>
+          </item>
+          <item>
+            <label>Inquilino(a)</label>
+            <value>tenant</value>
+          </item>
+          <item>
+            <label>Irmã(o)</label>
+            <value>brother</value>
+          </item>
+          <item>
+            <label>Madrasta</label>
+            <value>stepmother</value>
+          </item>
+          <item>
+            <label>Mãe</label>
+            <value>mother</value>
+          </item>
+          <item>
+            <label>Membro</label>
+            <value>member</value>
+          </item>
+          <item>
+            <label>Neto(a)</label>
+            <value>grandson</value>
+          </item>
+          <item>
+            <label>Padrasto</label>
+            <value>stepfather</value>
+          </item>
+          <item>
+            <label>Pai</label>
+            <value>father</value>
+          </item>
+          <item>
+            <label>PCA</label>
+            <value>pca</value>
+          </item>
+          <item>
+            <label>Presidente</label>
+            <value>president</value>
+          </item>
+          <item>
+            <label>Primo(a)</label>
+            <value>cousin</value>
+          </item>
+          <item>
+            <label>Representante legal</label>
+            <value>legal_rep</value>
+          </item>
+          <item>
+            <label>Sobrinho(a)</label>
+            <value>nephew</value>
+          </item>
+          <item>
+            <label>Socio(a)</label>
+            <value>partner</value>
+          </item>
+          <item>
+            <label>Sogro(a)</label>
+            <value>father_in_law</value>
+          </item>
+          <item>
+            <label>Tio(a)</label>
+            <value>uncle</value>
+          </item>
+          <item>
+            <label>Trabalhador(a)</label>
+            <value>worker</value>
+          </item>
+          <item>
+            <label>Tutor de menor</label>
+            <value>tutor</value>
+          </item>
+          <item>
+            <label>Vice Presidente</label>
+            <value>vice_president</value>
+          </item>
+          <item>
+            <label>Outro</label>
+            <value>other</value>
+          </item>
+        </select1>
+        <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8">
+          <label>Detalhes de documentos</label>
+          <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_document">
+            <label>Tipo de documento de identificação:</label>
+            <item>
+              <label>Bilhete de Identidade</label>
+              <value>identity_document</value>
+            </item>
+            <item>
+              <label>Talão do BI</label>
+              <value>identity_receipt</value>
+            </item>
+            <item>
+              <label>Cartão de Eleitor</label>
+              <value>voter_card</value>
+            </item>
+            <item>
+              <label>Cédula Pessoal</label>
+              <value>personal_ballot</value>
+            </item>
+            <item>
+              <label>Declaração (Documento de Testemunhas)</label>
+              <value>declaration</value>
+            </item>
+            <item>
+              <label>Cartão de Desmobilização/Cartão Militar</label>
+              <value>demobilization_card</value>
+            </item>
+            <item>
+              <label>Passaporte</label>
+              <value>passport</value>
+            </item>
+            <item>
+              <label>Carta de Condução</label>
+              <value>driving_licence</value>
+            </item>
+            <item>
+              <label>Cartão de pagamento de imposto</label>
+              <value>tax_payment_card</value>
+            </item>
+            <item>
+              <label>NUIT</label>
+              <value>nuit</value>
+            </item>
+            <item>
+              <label>outro</label>
+              <value>other</value>
+            </item>
+          </select1>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_number">
+            <label>Numero de documento:</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_place_issued">
+            <label>Local de Emissão:</label>
+          </input>
+          <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_date_issued">
+            <label>Emissão:</label>
+          </input>
+          <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_date_validity">
+            <label>Validade:</label>
+          </input>
+          <select1 ref="/ILRG_ORAM_P_parcels/add_rights_holders/Pg8/id_permanent">
+            <label>Será que o BI é vitalício?</label>
+            <item>
+              <label>Sim</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>no</value>
+            </item>
+          </select1>
+        </group>
+        <select1 ref="/ILRG_ORAM_P_parcels/add_rights_holders/nuit_y_n">
+          <label>Será que a pessoa tem NUIT?</label>
+          <item>
+            <label>Sim</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <input appearance="numbers" ref="/ILRG_ORAM_P_parcels/add_rights_holders/nuit">
+          <label>Qual é o numero do NUIT?</label>
+        </input>
+        <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/photo_note">
+          <label ref="jr:itext('/ILRG_ORAM_P_parcels/add_rights_holders/photo_note:label')"/>
+        </input>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_rights_holders/photo">
+          <label>Tire uma fotografia da pessoa</label>
+        </upload>
+        <upload appearance="signature" mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_rights_holders/signature">
+          <label>Assinatura da pessoa</label>
+        </upload>
+        <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_note">
+          <label ref="jr:itext('/ILRG_ORAM_P_parcels/add_rights_holders/id_image_note:label')"/>
+        </input>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_front">
+          <label>Tire uma fotografia do documento de identificação apresentado</label>
+        </upload>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_rights_holders/id_image_back">
+          <label>Tire uma fotografia do &lt;span style=&quot;color:#FF0000&quot;&gt;verso&lt;/span&gt; do documento de identificação apresentado (no caso de BI)</label>
+        </upload>
+        <input appearance="numbers" ref="/ILRG_ORAM_P_parcels/add_rights_holders/contact_tel">
+          <label>Numero de telemóvel:</label>
+        </input>
+        <input ref="/ILRG_ORAM_P_parcels/add_rights_holders/contact_email">
+          <label>Endereço do email:</label>
+        </input>
+      </repeat>
+    </group>
+    <input ref="/ILRG_ORAM_P_parcels/witness_number">
+      <label>Quantas testemunhos estão presentes?</label>
+    </input>
+    <group ref="/ILRG_ORAM_P_parcels/witnesses">
+      <label>Testemunhos</label>
+      <repeat jr:count=" /ILRG_ORAM_P_parcels/witnesses_count " nodeset="/ILRG_ORAM_P_parcels/witnesses">
+        <input ref="/ILRG_ORAM_P_parcels/witnesses/searchtext_1">
+          <label>Testemunhos - digite as primeiras letras do nome a ser pesquisada da lista de pessoas já registadas:</label>
+        </input>
+        <select1 appearance="search( /ILRG_ORAM_P_parcels/assoc_id , 'startswith', 'party_name',  /ILRG_ORAM_P_parcels/witnesses/searchtext_1 )" ref="/ILRG_ORAM_P_parcels/witnesses/witness">
+          <label>Selecionar o nome do testemunho(a):</label>
+          <item>
+            <label>party_name</label>
+            <value>party_id_key</value>
+          </item>
+          <item>
+            <label>Outro nome (não está na lista)</label>
+            <value>1</value>
+          </item>
+        </select1>
+        <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/witnesses/witness_type">
+          <label>Categoria da testemunha</label>
+          <item>
+            <label>Chefe da Zona ou Povoado</label>
+            <value>authority</value>
+          </item>
+          <item>
+            <label>Representante da Associação</label>
+            <value>assoc_rep</value>
+          </item>
+          <item>
+            <label>Vizinho directo</label>
+            <value>direct_neighbour</value>
+          </item>
+          <item>
+            <label>Vizinho perto</label>
+            <value>nearby_neighbour</value>
+          </item>
+        </select1>
+      </repeat>
+    </group>
+    <select1 ref="/ILRG_ORAM_P_parcels/new_witness_y_n">
+      <label>Quer fazer registo dum(a) testemunho(a), cujo nome não apareceu na lista?</label>
+      <hint>Se não for encontrado nenhum dos nomes dos testemunhos, TEM QUE RESPONDER 'SIM', E FAZER O REGISTO DE PELO MENOS UM NOME AQUI!!</hint>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_ORAM_P_parcels/reg_new_witness_number">
+      <label>Quantos pessoas ainda não registadas são? Se for apenas uma pessoa, digite '1'</label>
+    </input>
+    <group ref="/ILRG_ORAM_P_parcels/add_witnesses">
+      <label>Novos Testemunhos</label>
+      <repeat jr:count=" /ILRG_ORAM_P_parcels/add_witnesses_count " nodeset="/ILRG_ORAM_P_parcels/add_witnesses">
+        <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9">
+          <label>Nomes de pessoa e familiares</label>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/family_name_1">
+            <label>Qual é o apelido da pessoa?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/given_name_1">
+            <label>Qual é o nome da pessoa?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/other_name_1">
+            <label>Qual é a outra nome da pessoa, se tiver?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/mother_name_1">
+            <label>Qual é o nome completo da mãe da pessoa?</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/father_name_1">
+            <label>Qual é o nome completo do pai da pessoa?</label>
+          </input>
+        </group>
+        <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg10">
+          <label>Detalhes de pessoa</label>
+          <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg10/gender_1">
+            <label>Qual é o género da pessoa?</label>
+            <item>
+              <label>Masculino</label>
+              <value>male</value>
+            </item>
+            <item>
+              <label>Feminino</label>
+              <value>female</value>
+            </item>
+          </select1>
+          <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg10/civil_1">
+            <label>Escolhe o estado civil da pessoa:</label>
+            <item>
+              <label>Solteiro (a)</label>
+              <value>single</value>
+            </item>
+            <item>
+              <label>União de Facto</label>
+              <value>de_facto_union</value>
+            </item>
+            <item>
+              <label>Casado (a)</label>
+              <value>married</value>
+            </item>
+            <item>
+              <label>Divorciado (a)</label>
+              <value>divorced</value>
+            </item>
+            <item>
+              <label>Viúvo (a)</label>
+              <value>widowed</value>
+            </item>
+          </select1>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg10/birthplace_1">
+            <label>Qual é a naturalidade da pessoa?</label>
+          </input>
+        </group>
+        <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_witnesses/birthdate_y_n_1">
+          <label>A pessoa conhece a data de nascimento ou a data está disponível através do documento?</label>
+          <item>
+            <label>Sim</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/add_witnesses/birthdate_1">
+          <label>Data de nascimento:</label>
+        </input>
+        <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_witnesses/age_range_1">
+          <label>Qual é a idade da pessoa?</label>
+          <item>
+            <label>Menos de 18 anos</label>
+            <value>minor</value>
+          </item>
+          <item>
+            <label>Entre 18 - 30 anos</label>
+            <value>youth</value>
+          </item>
+          <item>
+            <label>Entre 30 - 50 anos</label>
+            <value>adult</value>
+          </item>
+          <item>
+            <label>50+ anos</label>
+            <value>elder</value>
+          </item>
+        </select1>
+        <input ref="/ILRG_ORAM_P_parcels/add_witnesses/note_age_1">
+          <label>A pessoa possui <output value=" /ILRG_ORAM_P_parcels/add_witnesses/age_years_1 "/> anos, ou menos de 18 anos. &lt;br/&gt;&lt;br/&gt;Esta pessoa não pode ser testemunho(a), porque ainda é menor.&lt;br/&gt;&lt;br/&gt; &lt;span style=&quot;color:#FF0000&quot;&gt;O(A) enumerador deve fazer registo duma outra pessoa, maior de que 18 anos.&lt;/span&gt;</label>
+        </input>
+        <group appearance="field-list" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11">
+          <label>Detalhes de documentos</label>
+          <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_document_1">
+            <label>Tipo de documento de identificação:</label>
+            <item>
+              <label>Bilhete de Identidade</label>
+              <value>identity_document</value>
+            </item>
+            <item>
+              <label>Talão do BI</label>
+              <value>identity_receipt</value>
+            </item>
+            <item>
+              <label>Cartão de Eleitor</label>
+              <value>voter_card</value>
+            </item>
+            <item>
+              <label>Cédula Pessoal</label>
+              <value>personal_ballot</value>
+            </item>
+            <item>
+              <label>Declaração (Documento de Testemunhas)</label>
+              <value>declaration</value>
+            </item>
+            <item>
+              <label>Cartão de Desmobilização/Cartão Militar</label>
+              <value>demobilization_card</value>
+            </item>
+            <item>
+              <label>Passaporte</label>
+              <value>passport</value>
+            </item>
+            <item>
+              <label>Carta de Condução</label>
+              <value>driving_licence</value>
+            </item>
+            <item>
+              <label>Cartão de pagamento de imposto</label>
+              <value>tax_payment_card</value>
+            </item>
+            <item>
+              <label>NUIT</label>
+              <value>nuit</value>
+            </item>
+            <item>
+              <label>outro</label>
+              <value>other</value>
+            </item>
+          </select1>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_number_1">
+            <label>Numero de documento:</label>
+          </input>
+          <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_place_issued_1">
+            <label>Local de Emissão:</label>
+          </input>
+          <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_date_issued_1">
+            <label>Emissão:</label>
+          </input>
+          <input appearance="no-calendar" ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_date_validity_1">
+            <label>Validade:</label>
+          </input>
+          <select1 ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg11/id_permanent_1">
+            <label>Será que o BI é vitalício?</label>
+            <item>
+              <label>Sim</label>
+              <value>yes</value>
+            </item>
+            <item>
+              <label>Não</label>
+              <value>no</value>
+            </item>
+          </select1>
+        </group>
+        <select1 ref="/ILRG_ORAM_P_parcels/add_witnesses/nuit_y_n_1">
+          <label>Será que a pessoa tem NUIT?</label>
+          <item>
+            <label>Sim</label>
+            <value>yes</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>no</value>
+          </item>
+        </select1>
+        <input appearance="numbers" ref="/ILRG_ORAM_P_parcels/add_witnesses/nuit_1">
+          <label>Qual é o numero do NUIT?</label>
+        </input>
+        <input ref="/ILRG_ORAM_P_parcels/add_witnesses/photo_note_1">
+          <label ref="jr:itext('/ILRG_ORAM_P_parcels/add_witnesses/photo_note_1:label')"/>
+        </input>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_witnesses/photo_1">
+          <label>Tire uma fotografia da pessoa</label>
+        </upload>
+        <upload appearance="signature" mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_witnesses/signature_1">
+          <label>Assinatura da pessoa</label>
+        </upload>
+        <input ref="/ILRG_ORAM_P_parcels/add_witnesses/id_image_note_1">
+          <label ref="jr:itext('/ILRG_ORAM_P_parcels/add_witnesses/id_image_note_1:label')"/>
+        </input>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_witnesses/id_image_front_1">
+          <label>Tire uma fotografia do documento de identificação apresentado</label>
+        </upload>
+        <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/add_witnesses/id_image_back_1">
+          <label>Tire uma fotografia do &lt;span style=&quot;color:#FF0000&quot;&gt;verso&lt;/span&gt; do documento de identificação apresentado (no caso de BI)</label>
+        </upload>
+        <input appearance="numbers" ref="/ILRG_ORAM_P_parcels/add_witnesses/contact_tel_1">
+          <label>Numero de telemóvel:</label>
+        </input>
+        <input ref="/ILRG_ORAM_P_parcels/add_witnesses/contact_email_1">
+          <label>Endereço do email:</label>
+        </input>
+        <select1 appearance="minimal" ref="/ILRG_ORAM_P_parcels/add_witnesses/witness_type">
+          <label>Categoria da testemunha</label>
+          <item>
+            <label>Chefe da Zona ou Povoado</label>
+            <value>authority</value>
+          </item>
+          <item>
+            <label>Representante da Associação</label>
+            <value>assoc_rep</value>
+          </item>
+          <item>
+            <label>Vizinho directo</label>
+            <value>direct_neighbour</value>
+          </item>
+          <item>
+            <label>Vizinho perto</label>
+            <value>nearby_neighbour</value>
+          </item>
+        </select1>
+      </repeat>
+    </group>
+    <input ref="/ILRG_ORAM_P_parcels/auto_gps">
+      <label>É obrigatório gravar um ponto dentro da parcela, no centro.</label>
+      <hint>GPS coordinates can only be collected when outside.</hint>
+    </input>
+    <select1 ref="/ILRG_ORAM_P_parcels/limits_y_n">
+      <label>Será que é necessário gravar pontos de limites da parcela (porque não estão claros no mapa)?</label>
+      <item>
+        <label>Sim</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <group ref="/ILRG_ORAM_P_parcels/Pontos">
+      <label>Pontos de limites</label>
+      <repeat nodeset="/ILRG_ORAM_P_parcels/Pontos">
+        <input ref="/ILRG_ORAM_P_parcels/Pontos/auto_gps_limit">
+          <label>Gravar um ponto</label>
+          <hint>Gravar um ponto a qualquer mudança de direcção, e pelo menos uma vez a cada dez metros. Lembrete: se a 'localização record' está levando algum tempo, por favor, verifique se a luz azul do seu Glo</hint>
+        </input>
+      </repeat>
+    </group>
+    <input ref="/ILRG_ORAM_P_parcels/endnote">
+      <label>Está quase no fim do formulário. 
+
+Agora pode preencher o recibo, tirar uma foto do recibo e entregar o original ao requerente. 
+
+A primeira copia do original vai para a Associação Comunitária.
+
+A segunda copia do original fica no livro de recibos.</label>
+    </input>
+    <upload mediatype="image/*" ref="/ILRG_ORAM_P_parcels/receipt_image">
+      <label>Tire uma fotografia do recibo</label>
+    </upload>
+  </h:body>
+</h:html>
