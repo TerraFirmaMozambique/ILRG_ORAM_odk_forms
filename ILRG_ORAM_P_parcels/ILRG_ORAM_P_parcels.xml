@@ -35,7 +35,7 @@ Por favor deslizar para a frente para continuar.</value>
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_P_parcels id="ILRG_ORAM_P" version="201905081">
+        <ILRG_ORAM_P_parcels id="ILRG_ORAM_P" version="201905093">
           <start/>
           <deviceid/>
           <my_form_name/>
@@ -222,7 +222,7 @@ Por favor deslizar para a frente para continuar.</value>
       <bind calculate=" /ILRG_ORAM_P_parcels/rights_holder_number " nodeset="/ILRG_ORAM_P_parcels/right_holders_count" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/searchtext" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/right_holder" required="true()" type="select1"/>
-      <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/party_role" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/party_role" relevant=" /ILRG_ORAM_P_parcels/right_holders/right_holder = 'party_id_key'" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/right_holders/rep_relation" relevant=" /ILRG_ORAM_P_parcels/right_holders/party_role = 'representative_minor' or  /ILRG_ORAM_P_parcels/right_holders/party_role = 'representative_absent'" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/new_holder_y_n" required="true()" type="select1"/>
       <bind constraint=".&gt;0" nodeset="/ILRG_ORAM_P_parcels/reg_new_holder_number" relevant=" /ILRG_ORAM_P_parcels/new_holder_y_n = 'yes'" required="true()" type="int"/>
@@ -262,7 +262,7 @@ Por favor deslizar para a frente para continuar.</value>
       <bind calculate=" /ILRG_ORAM_P_parcels/witness_number " nodeset="/ILRG_ORAM_P_parcels/witnesses_count" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/searchtext_1" required="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/witness" required="true()" type="select1"/>
-      <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/witness_type" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_ORAM_P_parcels/witnesses/witness_type" relevant=" /ILRG_ORAM_P_parcels/witnesses/witness = 'party_id_key'" required="true()" type="select1"/>
       <bind nodeset="/ILRG_ORAM_P_parcels/new_witness_y_n" required="true()" type="select1"/>
       <bind constraint=".&gt;0" nodeset="/ILRG_ORAM_P_parcels/reg_new_witness_number" relevant=" /ILRG_ORAM_P_parcels/new_witness_y_n = 'yes'" required="true()" type="int"/>
       <bind calculate=" /ILRG_ORAM_P_parcels/reg_new_witness_number " nodeset="/ILRG_ORAM_P_parcels/add_witnesses_count" readonly="true()" type="string"/>
@@ -933,7 +933,7 @@ Por favor deslizar para a frente para continuar.</label>
       </repeat>
     </group>
     <select1 ref="/ILRG_ORAM_P_parcels/new_holder_y_n">
-      <label>Quer fazer registo dum(a) titular da parcela, ou representante, cujo nome não apareceu na lista?
+      <label>Quer fazer registo dum(a) titular da parcela, ou representante, cujo nome não apareceu na lista? &lt;br/&gt; &lt;br/&gt; 
 
 &lt;span style=&quot;color:#FF0000&quot;&gt;Se não for encontrado nenhum dos nomes dos titulares, TEM QUE RESPONDER 'SIM', E FAZER O REGISTO DE PELO MENOS UM NOME AQUI!!&lt;/span&gt;</label>
       <item>
@@ -1356,8 +1356,9 @@ A outra pessoa pode ser registada através deste formulário.&lt;/span&gt;</labe
       </repeat>
     </group>
     <select1 ref="/ILRG_ORAM_P_parcels/new_witness_y_n">
-      <label>Quer fazer registo dum(a) testemunho(a), cujo nome não apareceu na lista?</label>
-      <hint>Se não for encontrado nenhum dos nomes dos testemunhos, TEM QUE RESPONDER 'SIM', E FAZER O REGISTO DE PELO MENOS UM NOME AQUI!!</hint>
+      <label>Quer fazer registo dum(a) testemunho(a), cujo nome não apareceu na lista?&lt;br/&gt; &lt;br/&gt; 
+
+&lt;span style=&quot;color:#FF0000&quot;&gt;Se não for encontrado nenhum dos nomes dos testemunhos, TEM QUE RESPONDER 'SIM', E FAZER O REGISTO DE PELO MENOS UM NOME AQUI!!&lt;/span&gt;</label>
       <item>
         <label>Sim</label>
         <value>yes</value>
