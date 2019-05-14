@@ -35,7 +35,7 @@ Por favor deslizar para a frente para continuar.</value>
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_P_parcels id="ILRG_ORAM_P" version="201905093">
+        <ILRG_ORAM_P_parcels id="ILRG_ORAM_P" version="201905094">
           <start/>
           <deviceid/>
           <my_form_name/>
@@ -1383,7 +1383,7 @@ A outra pessoa pode ser registada através deste formulário.&lt;/span&gt;</labe
             <label>Qual é o nome da pessoa?</label>
           </input>
           <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/other_name_1">
-            <label>Qual é a outra nome da pessoa, se tiver?</label>
+            <label>Qual é a outro nome da pessoa, se tiver?</label>
           </input>
           <input ref="/ILRG_ORAM_P_parcels/add_witnesses/Pg9/mother_name_1">
             <label>Qual é o nome completo da mãe da pessoa?</label>
