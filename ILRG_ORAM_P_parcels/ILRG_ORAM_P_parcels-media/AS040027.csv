@@ -1,72 +1,135 @@
 party_id_key,party_name
+uuid:2f3aa7ac-f069-4f39-a1ef-f1d93e56dd9d,Alexandre Acuiratepa voter_card 08036496
 uuid:538a6dd4-d536-429b-9218-3d547a689049,Calisto Acuiriatepa identity_document 04061151080A
 uuid:10ae4d07-ea9d-48f9-a789-8f2e7e3dd694,Alexandre Acuiriatepa voter_card 08036496
+uuid:87bdc144-fdb5-49cf-95cb-47cd7ed57ba4,Gilda Paulo Afonso voter_card 04196110051909026
 uuid:b500f303-5ada-477e-b093-45767e9d4c45,Antonia Agostinho voter_card 05674727
 uuid:8e0a26ed-8755-471a-9f04-2e67224c49d2,Joana Alberto voter_card 12278072
 uuid:6f2e238d-85ab-410f-8aac-04cfc468de78,Luis Alfaiate identity_document 040606243438Q
 uuid:8baafbe0-5b72-47d2-b10e-6433d8dae2ae,Cristina Alfaiate voter_card 05674979
-uuid:36338de4-ed8b-4123-8dfb-ad9fede9e063,Rosa Amandio voter_card 0406A7553465210683
+uuid:3f3fcc04-0562-45bd-b7e3-d16a4589d646,Abel António Amalapo voter_card 041961-22041910431
+uuid:a5314ad3-ca7a-4fee-9dd6-0dd3df4af860,Rafael Jaime Amalapoinrima identity_receipt 1391971
 uuid:c4552606-c772-4ff2-a808-930f4ada77fa,Paulina Amandio voter_card 08036438
-uuid:d5ed80e2-e8c3-4c0d-a633-39853ea5d322,Bernardo Antonio voter_card 08036313
+uuid:36338de4-ed8b-4123-8dfb-ad9fede9e063,Rosa Amandio voter_card 0406A7553465210683
 uuid:ee0a7fe3-01b5-4e46-abe3-6506d6766e65,Amina Antonio personal_ballot 697626
+uuid:d5ed80e2-e8c3-4c0d-a633-39853ea5d322,Bernardo Antonio voter_card 08036313
+uuid:33b1c68f-ee9c-43f4-b4ef-f3e64d0cc473,Adelina Antonio voter_card 08742759
 uuid:1e56f571-6fce-406e-b02b-15859a72aa66,Cecília Nari António voter_card 08742819
+uuid:57e80d2f-95bc-44b4-b6fb-5977973ed35b,Arcindo Jorge Armando personal_ballot 992893
 uuid:d5c87ab2-e1d0-4450-9987-2ab40aeba5e8,Gerânio Lucas Artut voter_card 13007721
+uuid:ae16a474-34b9-4f4b-ad68-4557c0b42f00,Cecilia Felizardo Augusto voter_card 08036210
 uuid:633f56e2-bea8-4452-8266-40d5ca3c0c66,Constantino Brianca voter_card 11063020
-uuid:7cc6c97f-d0e0-476c-8296-f1553af8f44c,Felizberto costidio Camiao voter_card 13007963
 uuid:84c7c757-98ac-4da3-bd2a-04aa6000dbee,Rosalina Camiao voter_card 08022177
-uuid:9e683c6b-1f23-4a91-98d3-d42ffb365cc5,Mariana Camião voter_card 08188160
+uuid:7cc6c97f-d0e0-476c-8296-f1553af8f44c,Felizberto costidio Camiao voter_card 13007963
 uuid:e6f0e665-43c0-4bcd-80d1-b217ab44722f,Armando  Amandio Camião voter_card 080363998
+uuid:2fe5f2df-10e4-4964-87b0-badc2fb8db18,Maria Camião voter_card O8036443
+uuid:457ff25b-9eae-4788-990f-af461b97ac57,Aulalia  Custódio Camião personal_ballot 989931
+uuid:9e683c6b-1f23-4a91-98d3-d42ffb365cc5,Mariana Camião voter_card 08188160
+uuid:8a592521-1a51-4de5-8bf5-f78509038ad3,Magalhaes Carte voter_card 0412602041811084
+uuid:eaaefc64-e574-4eef-992c-63a59066c282,Gerem ia Armando Catao voter_card 040229-08051903566
 uuid:3826edbd-8b31-47b5-a93c-cadd1b194abc,Madalena Cesar voter_card 13007823
 uuid:175d8d3e-580e-49b6-acaf-8ffb976620d6,Lucia Companha voter_card 06146839
 uuid:a394334d-4cb2-4ed0-8a48-490f263ba9be,Fátima Companhia voter_card 05559876
 uuid:125e2c7c-435f-45f7-a4da-703f41844695,Maria Comua voter_card 05821984
+uuid:ce48c85d-02ee-4918-a18d-22dead580e4b,Catarina  Andre Conçalves voter_card 12063208
+uuid:a7ff836c-6012-45ca-ad09-f6fb81ce7353,Fatima Andre Conçalves voter_card 11063229
+uuid:b36cc8c8-9338-43cb-985b-569ace76dc13,Fatima Andre Conçalves voter_card 11063239
 uuid:6aa34e3c-e05b-4fe0-ad5a-f19b2cca0083,Catarina Andre Conçalves voter_card 11063208
 uuid:09de1d9b-3b11-463c-8a72-0e3067b85523,Olinda Orlando Daussene voter_card 785635
 uuid:e95ff0c7-6e7c-4f3c-8d12-4fbc739d3ac6,Anifa Dionisio voter_card 05674870
+uuid:0c0a7b24-9a4f-4349-a9f5-374c17827193,Joana C Domingo voter_card 38540022
+uuid:30eb2845-f2a2-4a89-bc37-498212428da0,Joana C Domingos voter_card 30540622
 uuid:d1ba648e-9634-48fa-8f58-39ad03f2499c,Cecília  José Ecama voter_card 08036439
+uuid:63de6b5a-b732-4e5f-89a5-d0c4a74fe01b,Mateus Ernesto identity_receipt 46611191
+uuid:ef5e06ab-24ac-4afc-af60-ccc450ebcf63,Itália Esperto voter_card 04920858
+uuid:4655644e-951c-42d6-a957-9f17d9d0711d,Itália Esperto voter_card 0420858
 uuid:6138265e-0575-4798-aaf6-25d4c8a3a42e,Cristina Esperto voter_card 13007926
+uuid:bdc8620c-d936-4c80-8f15-99fde144a57b,Esmenia Felizardo other 1582
 uuid:52cf5a43-d849-4653-a096-f340f800126f,Homilia Amigo Fernando personal_ballot 1518
+uuid:b137f6ab-52a7-4242-8e6b-e9a86a1c50c5,Justina Fernando voter_card 08188369
 uuid:ee64d8e9-f76a-4eaf-83c1-2b386a7651d5,Alberto Silva Francisco voter_card 13007604
 uuid:3c9a50f7-5865-4297-bb22-38554551d7e1,Fatima Gonçalves voter_card 11063229
+uuid:c2694ec8-d7e7-4f40-abbe-13984d7d8070,Catarina Andre Gonçalves voter_card 11063208
 uuid:e9bcd67c-8539-44e1-af1f-404e1fd65a48,Arelia Intapue voter_card 11063085
+uuid:561137b7-2ae1-44fa-b0cb-7c86909b0b7c,Felomena Intelamoro voter_card 04196109051907231
+uuid:d456925e-edc5-41b6-b800-538dafdcf829,Felomena Intelamoro voter_card 04196109051907232
+uuid:43f7ff80-f07c-422d-a26f-cb07006fc98e,Laurinda Itumpe voter_card 08188007
 uuid:328a03f3-31a0-4db9-91e8-5ca6d136aa51,Estfania Jacinto voter_card 11063100
+uuid:28e83cca-f05c-4936-ac19-25dcc60232e9,Virgílio António João identity_document 040601151081p
+uuid:258966e6-98c5-40dc-8ad4-752a661aeefd,Virgílio  António João identity_document 040601151081p
+uuid:51bfd4f7-1f60-467d-9f20-dfc5149c5e59,Julieta madeira voter_card 04196109051911016
+uuid:61cc88af-be11-4d27-b9ca-1b1c8c3751d5,Julieta Madeira personal_ballot 04196105091911016
+uuid:14307eaf-c3a0-4872-91c4-44442afc025c,Julieta Madeira voter_card 0419610509191101
 uuid:783eb726-c59a-4494-a3fa-e8281739045a,Florinda Mahiealomue voter_card 13007997
 uuid:af4c7001-a0d6-455a-b97a-c33bfb7b7972,Maria Mahiealomue voter_card 38540647
-uuid:286eca79-99c7-4ea9-ab21-75ee03d3fd72,Lidia Manuel voter_card 11063294
 uuid:46cc7b97-4c6b-454d-878e-86bd942efb97,Elisa Manuel voter_card 05674665
+uuid:a2482040-88f1-4a9c-ba8a-613eda644bc1,Elisa Manuel voter_card 0567466 5
+uuid:286eca79-99c7-4ea9-ab21-75ee03d3fd72,Lidia Manuel voter_card 11063294
 uuid:88152441-08a2-4527-922c-65044d0a2caa,Rassul  Franco MANUEL identity_receipt 48115410
 uuid:c21b5763-5d51-4654-8e3d-fb5bb9a3bad8,Lucinda Daniel Maricoa identity_document 040606542402F
+uuid:2c2bd242-85dd-4f64-aaec-9994b7db14a4,Fátima  Sabonete Matemate voter_card 041961-30041909348
+uuid:6898f300-b107-4363-840f-7563ce1d3e06,Amelia Moro voter_card 04196102051914483
 uuid:a7ab4007-76cc-45e0-9e18-485eb71676f9,Amelia José Mutola Moro voter_card 04196102051914483
+uuid:6c7bea1f-cf82-46bd-9ab3-e6b6e3fd0fcb,Eulália Francisco Muacanane personal_ballot 9453
+uuid:6f6b0dff-51be-4c5a-9f1f-400d28e1eff5,
 uuid:67393ee9-13a8-4e96-9305-aeae50652bf8,EDUARDO Muanaumoha voter_card 13007919
+uuid:adbabdee-18ea-472b-bcfe-1f7826d9b518,Celestina Joaquim Muanavava personal_ballot 684
 uuid:eb43eea0-b1c2-48e9-a40f-6d1dbe567f50,Fatima Muanavava voter_card 05444179
+uuid:e59b2e14-6f53-4786-9c68-30cb6f1057c0,Pedro Muarauane voter_card 0406A525346183
+uuid:ef9bf9d4-513f-4049-a515-e5bd2aa123ad,Joaquina Pedro Muarauane voter_card 04296110051907121
+uuid:b640147a-dc69-4805-baf2-497d6cebd07d,Joaquina Pedro Muarauane voter_card 04196110051907121
+uuid:58008aa5-df07-4484-9685-e3d1fda4b15a,Saida  sozinho Muataliwa voter_card 04196107051914587
 uuid:868110d2-8bcb-4fb3-b9c5-98ef5260625e,Célia Alexandre Mucubela voter_card 11063483
 uuid:a83f04e3-51af-4e72-832a-dd6a2482dcb0,Fatima Muecuelatxoni voter_card 13007908
+uuid:6207b407-e5a1-4c0c-965e-52634322ce80,Julieta Armando Mugugum voter_card 041961-25041912108
+uuid:c1ca78da-bf74-4286-ba71-d3f65027b28a,Leonora Muitiaca voter_card 0406705346616
+uuid:38e630b3-cfeb-4de4-8eba-59af480fb55a,Francisco Naquela Muitxeia voter_card 0406535346374
 uuid:aa30e3ea-2793-486c-9096-6011b96d57d4,Albertina Maputo Muiua voter_card 05444077
 uuid:4c84f288-0ecc-49e8-ad55-4cf1d1176ae0,Lidia Mulimao voter_card 05674809
 uuid:7ad58dd5-7163-4cf0-b37c-f5af9a8c8fd5,Albino Munavava identity_document 040601346625N
 uuid:ff46e42f-ec76-4012-aa9c-509bd8a6843c,Francisco  Graciano Mussa voter_card 13007755
 uuid:6f1f0111-36f4-447e-9bc7-cc0ac3db844a,Fatima Suterra Muteresa voter_card 041961290419139
+uuid:441aed59-dd7f-4708-81d8-cf65c653d1f6,Glória Mutolamoro voter_card 041961o7o51913337
+uuid:deb35dbd-4ef2-4881-b688-ff9cd7918d07,Glória Mutolamoro voter_card O41961o7o51914365
+uuid:7cfd0947-10d5-417c-b603-0b010a7967a0,Esmenia Mutolamoro voter_card 04196107051914365
+uuid:5e1068a6-7a09-4f16-badf-142e99f7187d,Glória Mutolamoro voter_card 0419610705193337
+uuid:7d11dcd7-35cc-4b97-b6cc-6d9a0665e278,Gloria Mutolamoro voter_card 04196107051913337
 uuid:8cdcc039-60f5-4bf9-8ed4-8b91222c679d,Sonas colaço Nacavaco voter_card 04196122041990222
 uuid:2711fc1d-0c72-41e5-a35f-e5be13859972,Virgínia João Nacuassa voter_card 08036494
 uuid:e3a8ec80-97d8-427e-bf3e-f7ccee461232,Aviador Namaquero identity_document 040601972654S
+uuid:82c31883-85b5-4b6a-b3f9-152c0a99ac48,Nelito Gonçalves Nampapi voter_card 041961-25041911323
+uuid:f94fa849-0663-4eee-9803-e57d27e213f9,Gonçalves Nampapi voter_card 04920518
+uuid:23f56f4b-65dd-457c-b24c-2427d915acc6,Juliana Gonçalves Nampapi voter_card 041961-30041915011
 uuid:8944b1a4-6c17-4bc6-bb62-bf9b46e95b6e,Elisa Namsela voter_card 04196129041913400
 uuid:4da368c2-824d-4573-be87-c283a118c62d,Alberto Naquela voter_card 08188468
+uuid:34713866-7638-4bac-90bf-62fef57a7945,Nortenho Victor Narpuatxa voter_card 04252280411377
+uuid:81fdf2f5-f7b4-4fe4-946c-e672b99c60e6,Nortenho Victor Narpuatxa voter_card 0425228041811377
 uuid:f4307664-2a23-4d78-8ef2-b6a4a388807d,Joaquim Natom voter_card 04196101696
+uuid:7a05c947-fbe7-4931-8161-de9881b573e3,Maria  Muitaca Nicuala voter_card 04196107051914037
 uuid:7c13a708-c8e0-4951-978d-871dd8a042df,Maria  Muitaca Nicuala voter_card 041961-070551914037
+uuid:7b942fb2-32f6-43a4-90fd-08d836390bd2,Fernando Nihanle voter_card 08022118
+uuid:7e2bebc9-f9d3-46f2-9887-f3f4470b482f,Fernando Nihanle voter_card 0802218
+uuid:7e066b15-811f-47b6-85c2-72830755c5c0,Fernando Nihanle voter_card 08022118
 uuid:ba141406-e761-4c7a-b796-b88dc43de9c1,Francisco Camião Ogareia identity_document 040606243442B
 uuid:dd7dfab7-c283-4938-a285-f393a0dd562f,Saina orlando Orlando voter_card 05821826
 uuid:93691f96-771f-4ca7-9993-d55eb5fde22c,Anita  Mauricio Orocopiavo voter_card 040A765346827
 uuid:1d56485d-2d50-4b65-a1f1-6015e416986c,Esmenia Paulo voter_card 11063322
+uuid:cd6af86c-3540-485a-8631-005eb08db91a,Albertina Gonçalves Pedro voter_card 11063449
+uuid:9543e7e3-9f51-40e6-8190-8c20fbf90ae3,Tais a Ernesto Pelei personal_ballot 172301
 uuid:427fe838-b1cb-4f54-bd4a-e756201e267f,Maria Pequenino voter_card 11063477
 uuid:f8622b9d-716c-4930-9c0c-7336e4b3ee80,Fatima Nunes Pereira personal_ballot 8377
 uuid:f1347fb8-b593-48aa-8d4d-24eeafcad069,Fernando  Alberto Prima voter_card 05444161
 uuid:38cf515b-b539-4597-943d-3198281c8ae8,Lurdes Pure voter_card 11063484
 uuid:297b8f4f-0a75-4acf-a503-58bc33eec47c,Joao Raposso identity_document 040602627660J
 uuid:67883558-6ecf-4153-8969-9d23e2495d09,Celestina Ribeiro voter_card 11063488
+uuid:327ca683-1699-4e69-8d66-e86f1d7ac855,Lídia Daniel Santomeia voter_card 11063103
 uuid:b9ed0d3d-da0c-48ec-bf91-22a00f6f69fd,Lidia Santomeia voter_card 11063103
-uuid:f4f06917-ee24-4869-a880-2d381582bccc,Belinha Silva voter_card 05674881
+uuid:a1a0135f-9df3-4886-917f-800977a1b0f1,Lidia Santos voter_card 08036134
 uuid:f42f93da-e184-4cc8-81b1-5df9f5dee0f6,Carolina Silva voter_card 11063070
+uuid:f4f06917-ee24-4869-a880-2d381582bccc,Belinha Silva voter_card 05674881
+uuid:3ec9b87f-49eb-4be5-bc1f-3e491ca506fa,Orlando Bernardo Suaterra voter_card 11063430
 uuid:9b1b99c2-c90f-4796-b3cd-dade10bcd5d9,José Pedro Sua terra identity_document 040601972554s
+uuid:a045c746-b7ea-4028-8b0f-a20071903660,Margarida Trinta personal_ballot 425
 uuid:8692a4af-80ed-4190-98be-882f094ed1bc,Lucais Victor Tubar voter_card 11063198
 uuid:0be36944-2ed9-4594-a3dc-a8707e5a6302,Florencio Victor voter_card 08036388
 uuid:123a6d9a-9ad3-43d0-bf5b-434a414d7139,Henriques Welela voter_card 13007761

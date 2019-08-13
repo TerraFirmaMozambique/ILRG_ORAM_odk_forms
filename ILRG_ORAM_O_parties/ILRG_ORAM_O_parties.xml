@@ -23,7 +23,7 @@ Por favor deslizar para a frente para continuar.</value>
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_O_parties id="ILRG_ORAM_O" version="201904301">
+        <ILRG_ORAM_O_parties id="ILRG_ORAM_O" version="201907311">
           <start/>
           <today/>
           <deviceid/>
@@ -119,7 +119,7 @@ Por favor deslizar para a frente para continuar.</value>
       <bind calculate="int((today() -  /ILRG_ORAM_O_parties/birthdate ) div 365.24)" nodeset="/ILRG_ORAM_O_parties/age_years" type="string"/>
       <bind nodeset="/ILRG_ORAM_O_parties/note_age" readonly="true()" relevant=" /ILRG_ORAM_O_parties/age_years &lt;18 or  /ILRG_ORAM_O_parties/age_range = 'minor'" type="string"/>
       <bind nodeset="/ILRG_ORAM_O_parties/Og5/id_document" required="true()" type="select1"/>
-      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_O_parties/Og5/id_number" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_O_parties/Og5/id_number" type="string"/>
       <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - Os campos de numero ou local de emissão do documento não podia incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_ORAM_O_parties/Og5/id_place_issued" type="string"/>
       <bind constraint=". &lt; today()" nodeset="/ILRG_ORAM_O_parties/Og5/id_date_issued" type="date"/>
       <bind constraint=". &gt; today()" nodeset="/ILRG_ORAM_O_parties/Og5/id_date_validity" type="date"/>
@@ -131,7 +131,7 @@ Por favor deslizar para a frente para continuar.</value>
       <bind nodeset="/ILRG_ORAM_O_parties/signature" required="true()" type="binary"/>
       <bind nodeset="/ILRG_ORAM_O_parties/id_image_note" readonly="true()" type="string"/>
       <bind nodeset="/ILRG_ORAM_O_parties/id_image_front" required="true()" type="binary"/>
-      <bind nodeset="/ILRG_ORAM_O_parties/id_image_back" type="binary"/>
+      <bind nodeset="/ILRG_ORAM_O_parties/id_image_back" required="true()" type="binary"/>
       <bind constraint="regex(.,'[0-9]{9}')" jr:constraintMsg="O numero não está no formato correcto. Faça a favor de conferir" nodeset="/ILRG_ORAM_O_parties/contact_tel" type="string"/>
       <bind constraint="regex(., &quot;^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$&quot;)" jr:constraintMsg="O endereço não está no formato correcto. Faça a favor de conferir" nodeset="/ILRG_ORAM_O_parties/contact_email" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_ORAM_O_parties/end" type="dateTime"/>
@@ -164,8 +164,32 @@ Por favor deslizar para a frente para continuar.</label>
     <select1 appearance="minimal" ref="/ILRG_ORAM_O_parties/tec_name">
       <label>Introduza o seu nome&lt;br&gt;&lt;br&gt; Nome do(a) técnico(a):</label>
       <item>
+        <label>Abasto Abasto Janeiro</label>
+        <value>Abasto_Abasto_Janeiro</value>
+      </item>
+      <item>
+        <label>Abrao Saraiva Namuiri</label>
+        <value>Abrao_Saraiva_Namuiri</value>
+      </item>
+      <item>
+        <label>Adolfo da Suzana Santos</label>
+        <value>Adolfo_Suzana_Santos</value>
+      </item>
+      <item>
+        <label>Adriano Banco</label>
+        <value>Adriano_Banco</value>
+      </item>
+      <item>
+        <label>Anafuleza Xavier</label>
+        <value>Anafuleza_Xavier</value>
+      </item>
+      <item>
         <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Angelina Marques Impeia</label>
+        <value>Angelina_Marques_Impeia</value>
       </item>
       <item>
         <label>Arlindo Macuva</label>
@@ -212,12 +236,32 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Diosa_Alberto</value>
       </item>
       <item>
+        <label>Ericha Jose Elurane</label>
+        <value>Ericha_Jose_Elurane_</value>
+      </item>
+      <item>
         <label>Eulalia Pedro Candua</label>
         <value>Eulalia_Pedro_Candua</value>
       </item>
       <item>
+        <label>Gelacio Muganiua</label>
+        <value>Gelacio_Muganiua_</value>
+      </item>
+      <item>
+        <label>Geraldo Armando</label>
+        <value>Geraldo_Armando</value>
+      </item>
+      <item>
         <label>Geraldo E. Segura</label>
         <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Honorio Pedro</label>
+        <value>Honorio_Pedro</value>
+      </item>
+      <item>
+        <label>Joana Joao</label>
+        <value>Joana_Joao</value>
       </item>
       <item>
         <label>Leonardo Henriques</label>
@@ -228,8 +272,28 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Liliete_Arlindo_Francisco</value>
       </item>
       <item>
+        <label>Lourenco Manuel Eugenio</label>
+        <value>Lourenco_Manuel_Eugenio</value>
+      </item>
+      <item>
+        <label>Luis Botomane</label>
+        <value>Luis_Botomane</value>
+      </item>
+      <item>
         <label>Magaia Armando</label>
         <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Mateus Francisco Bizueque</label>
+        <value>Mateus_Francisco_Bizueque</value>
+      </item>
+      <item>
+        <label>Michael Antonio Whiulano</label>
+        <value>Michael_Antonio_Whiulano</value>
+      </item>
+      <item>
+        <label>Neldo Joao</label>
+        <value>Neldo_Joao</value>
       </item>
       <item>
         <label>Olinda Rui Muquelesse</label>
@@ -238,6 +302,10 @@ Por favor deslizar para a frente para continuar.</label>
       <item>
         <label>Onessimo A. Nepele</label>
         <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Rassul Francisco Manuel</label>
+        <value>Rassul_Francisco_Manuel</value>
       </item>
       <item>
         <label>Sadraque Franscisco</label>

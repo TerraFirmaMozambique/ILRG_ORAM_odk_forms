@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG FAQ Submission</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/faq_submission/Ag1/logo:label">
+            <value form="image">jr://images/usaid.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <faq_submission id="ILRG_faq_submission" version="201908121">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Ag1>
+            <logo/>
+            <cavateco/>
+          </Ag1>
+          <intronote/>
+          <name_author/>
+          <date/>
+          <partner/>
+          <topics/>
+          <gender/>
+          <faq/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </faq_submission>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/faq_submission/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/faq_submission/deviceid" type="string"/>
+      <bind calculate="&quot;Submissão de Perguntas Frequentes&quot;" nodeset="/faq_submission/my_form_name" type="string"/>
+      <bind nodeset="/faq_submission/Ag1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/faq_submission/Ag1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/faq_submission/intronote" readonly="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9 éáíóãõúçâê]{1,55}$&quot;)" nodeset="/faq_submission/name_author" required="true()" type="string"/>
+      <bind nodeset="/faq_submission/date" required="true()" type="date"/>
+      <bind nodeset="/faq_submission/partner" required="true()" type="select1"/>
+      <bind nodeset="/faq_submission/topics" required="true()" type="select1"/>
+      <bind nodeset="/faq_submission/gender" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9,. _-éáíóãõúçâê]{1,555}$&quot;)" nodeset="/faq_submission/faq" required="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/faq_submission/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/faq_submission/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat( /faq_submission/date ,'_', /faq_submission/partner ,'_faq')" nodeset="/faq_submission/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/faq_submission/Ag1">
+      <input ref="/faq_submission/Ag1/logo">
+        <label ref="jr:itext('/faq_submission/Ag1/logo:label')"/>
+      </input>
+      <input ref="/faq_submission/Ag1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /faq_submission/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/faq_submission/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /faq_submission/my_form_name "/>&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Este formulário é utilizado para submeter perguntas frequentes sobre a implementação do projecto, para fins de entender melhor as preocupações das comunidades e rever os materiais usados durante a sensibilização. 
+
+Alguns exemplos:
+
+- Quanto custa um certificado?
+- O que faço se não estiver na aldeia quando a delimitação acontece?
+- Podemos registrar uma criança como proprietário de terra?
+
+As perguntas, e as respostas corectas, também podem ser incluídas no Manual Operacional. A equipa responsável para o Manual vai analisar, incluir a pergunta no manual e juntar uma resposta/clarificação.. 
+
+Observe que a equipa de comunicação do ILRG pode entrar em contacto com os autores para discutir a pergunta e aprofundá-la.</label>
+    </input>
+    <input ref="/faq_submission/name_author">
+      <label>Escreve o nome e apelido:</label>
+    </input>
+    <input appearance="no-calendar" ref="/faq_submission/date">
+      <label>Data de submissão:</label>
+    </input>
+    <select1 ref="/faq_submission/partner">
+      <label>Parceiro:</label>
+      <item>
+        <label>ORAM</label>
+        <value>oram</value>
+      </item>
+      <item>
+        <label>Hluvukani</label>
+        <value>hluvukani</value>
+      </item>
+      <item>
+        <label>Terra Firma</label>
+        <value>terrafirma</value>
+      </item>
+      <item>
+        <label>Portucel</label>
+        <value>portucel</value>
+      </item>
+      <item>
+        <label>Illovo</label>
+        <value>illovo</value>
+      </item>
+    </select1>
+    <select1 ref="/faq_submission/topics">
+      <label>Selecionar o tópicos mais relevante a pergunta:</label>
+      <item>
+        <label>Associação Comunitária</label>
+        <value>community_land_assoc</value>
+      </item>
+      <item>
+        <label>Conflitos e Disputas</label>
+        <value>conflict</value>
+      </item>
+      <item>
+        <label>Delimitação Comunitária</label>
+        <value>community_land_delimitation</value>
+      </item>
+      <item>
+        <label>Delimitação das Machambas</label>
+        <value>hh_land_delimitation</value>
+      </item>
+      <item>
+        <label>Democracia e Governança</label>
+        <value>democracy</value>
+      </item>
+      <item>
+        <label>Florestas</label>
+        <value>forests</value>
+      </item>
+      <item>
+        <label>Gênero</label>
+        <value>gender</value>
+      </item>
+      <item>
+        <label>Herança</label>
+        <value>Inheritance</value>
+      </item>
+      <item>
+        <label>Populações Vulneráveis</label>
+        <value>vulnerable</value>
+      </item>
+      <item>
+        <label>Posse de Terra</label>
+        <value>land_tenure</value>
+      </item>
+      <item>
+        <label>Sector Privado</label>
+        <value>private_sector</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <select1 ref="/faq_submission/gender">
+      <label>Género da pessoa que fez a pergunta:</label>
+      <item>
+        <label>Masculino</label>
+        <value>male</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>female</value>
+      </item>
+    </select1>
+    <input ref="/faq_submission/faq">
+      <label>Escreve a pergunta aqui. Não utilize parágrafos.</label>
+    </input>
+  </h:body>
+</h:html>

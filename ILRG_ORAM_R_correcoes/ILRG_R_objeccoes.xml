@@ -1,0 +1,495 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>ILRG ORAM R - Objeccoes e Correcoes</h:title>
+    <model>
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/ILRG_R_objeccoes/Rg1/logo:label">
+            <value form="image">jr://images/oram_usaid.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ILRG_R_objeccoes id="ILRG_ORAM_R" version="201908091">
+          <start/>
+          <deviceid/>
+          <my_form_name/>
+          <Rg1>
+            <logo/>
+            <cavateco/>
+          </Rg1>
+          <intronote/>
+          <tec_name/>
+          <Rg2>
+            <tec_given_name/>
+            <tec_family_name/>
+          </Rg2>
+          <prov_id/>
+          <dist_id/>
+          <post_id/>
+          <assoc_id/>
+          <parcel_id/>
+          <parcel_id_check/>
+          <outcome/>
+          <party_id/>
+          <party_id_check/>
+          <issues/>
+          <parcel_id_new/>
+          <new_family_name/>
+          <new_name/>
+          <new_other_name/>
+          <new_gender/>
+          <new_birthdate/>
+          <new_id_document/>
+          <new_id_number/>
+          <new_limits/>
+          <new_limits_image/>
+          <end/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </ILRG_R_objeccoes>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/ILRG_R_objeccoes/start" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/ILRG_R_objeccoes/deviceid" type="string"/>
+      <bind calculate="&quot;Formulário R - Objecções e Correcções&quot;" nodeset="/ILRG_R_objeccoes/my_form_name" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/Rg1/logo" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/Rg1/cavateco" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/intronote" readonly="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/tec_name" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_R_objeccoes/Rg2" relevant=" /ILRG_R_objeccoes/tec_name ='other'"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_R_objeccoes/Rg2/tec_given_name" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâê]{1,25}$&quot;)" nodeset="/ILRG_R_objeccoes/Rg2/tec_family_name" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/prov_id" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_R_objeccoes/dist_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/post_id" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/assoc_id" required="true()" type="string"/>
+      <bind constraint="regex(.,'[0-9]{6}')" nodeset="/ILRG_R_objeccoes/parcel_id" required="true()" type="string"/>
+      <bind constraint=".= /ILRG_R_objeccoes/parcel_id " jr:constraintMsg="O número da parcela/registo que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/ILRG_R_objeccoes/parcel_id_check" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/outcome" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_R_objeccoes/party_id" required="true()" type="string"/>
+      <bind constraint=".= /ILRG_R_objeccoes/party_id " jr:constraintMsg="O número do titular que reentrou não corresponde à sua primeira entrada. Faça a favor de verificar de novo." nodeset="/ILRG_R_objeccoes/party_id_check" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/issues" relevant=" /ILRG_R_objeccoes/outcome ='change'" required="true()" type="select"/>
+      <bind nodeset="/ILRG_R_objeccoes/parcel_id_new" relevant="selected( /ILRG_R_objeccoes/issues , 'parcel')" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - O campo do apelido não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_R_objeccoes/new_family_name" relevant="selected( /ILRG_R_objeccoes/issues , 'family_name')" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - O campo do nome não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_R_objeccoes/new_name" relevant="selected( /ILRG_R_objeccoes/issues , 'given_name')" required="true()" type="string"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-éáíóãõúçâôàèê]{1,75}$&quot;)" jr:constraintMsg="Resposta invalida - O campo do outro nome não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_R_objeccoes/new_other_name" relevant="selected( /ILRG_R_objeccoes/issues , 'other_name')" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/new_gender" relevant="selected( /ILRG_R_objeccoes/issues , 'gender')" required="true()" type="select1"/>
+      <bind nodeset="/ILRG_R_objeccoes/new_birthdate" relevant="selected( /ILRG_R_objeccoes/issues , 'birthdate')" required="true()" type="date"/>
+      <bind nodeset="/ILRG_R_objeccoes/new_id_document" relevant="selected( /ILRG_R_objeccoes/issues , 'id_document')" required="true()" type="select1"/>
+      <bind constraint="regex(., &quot;^[a-zA-Z0-9. _-]{1,25}$&quot;)" jr:constraintMsg="Resposta invalida - O campo de numero do documento não pode incluir um novo paragrafo. Faça a favor de eliminar qualquer linha adicional." nodeset="/ILRG_R_objeccoes/new_id_number" relevant="selected( /ILRG_R_objeccoes/issues , 'id_number')" required="true()" type="string"/>
+      <bind calculate=" /ILRG_R_objeccoes/parcel_id " nodeset="/ILRG_R_objeccoes/new_limits" relevant="selected( /ILRG_R_objeccoes/issues , 'reconfig')" required="true()" type="string"/>
+      <bind nodeset="/ILRG_R_objeccoes/new_limits_image" relevant="selected( /ILRG_R_objeccoes/issues , 'reconfig')" required="true()" type="binary"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/ILRG_R_objeccoes/end" type="dateTime"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/ILRG_R_objeccoes/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('OC','_', /ILRG_R_objeccoes/assoc_id ,'_', /ILRG_R_objeccoes/parcel_id )" nodeset="/ILRG_R_objeccoes/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/ILRG_R_objeccoes/Rg1">
+      <input ref="/ILRG_R_objeccoes/Rg1/logo">
+        <label ref="jr:itext('/ILRG_R_objeccoes/Rg1/logo:label')"/>
+      </input>
+      <input ref="/ILRG_R_objeccoes/Rg1/cavateco">
+        <label>&lt;br/&gt; &lt;h1&gt;Projecto de Governação Integrada de Terra e Recursos&lt;/h1&gt;&lt;br/&gt; &lt;h2&gt;Uma iniciativa da USAID implementada pela ORAM e Terra Firma&lt;/h2&gt;&lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_R_objeccoes/my_form_name "/>&lt;/span&gt; &lt;br/&gt;</label>
+      </input>
+    </group>
+    <input ref="/ILRG_R_objeccoes/intronote">
+      <label>&lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;<output value=" /ILRG_R_objeccoes/my_form_name "/>&lt;/span&gt; &lt;br/&gt; 
+
+O técnico pode usar o formulário &lt;br/&gt; &lt;span style=&quot;color:#57b055&quot;&gt;depois de conclusão da publicação do edital&lt;/span&gt;.
+
+O formulário é usado para reportar:
+
+- a necessidade de mudar a configuração dos limites de parcelas
+
+ou
+
+- mudanças na informação publicada no edital, relacionada aos titulares
+
+ou
+
+- para confirmar a informação publicada no edital, relacionada aos titulares
+
+&lt;span style=&quot;color:#FF0000&quot;&gt;Se houver mais de um titular para uma parcela, o formulário deve ser preenchido uma vez para cada titular&lt;/span&gt; &lt;br/&gt; &lt;br/&gt;
+
+Por favor deslizar para a frente para continuar.</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_R_objeccoes/tec_name">
+      <label>Nome do(a) tecnico(a):</label>
+      <item>
+        <label>Abasto Abasto Janeiro</label>
+        <value>Abasto_Abasto_Janeiro</value>
+      </item>
+      <item>
+        <label>Abrao Saraiva Namuiri</label>
+        <value>Abrao_Saraiva_Namuiri</value>
+      </item>
+      <item>
+        <label>Adolfo da Suzana Santos</label>
+        <value>Adolfo_Suzana_Santos</value>
+      </item>
+      <item>
+        <label>Adriano Banco</label>
+        <value>Adriano_Banco</value>
+      </item>
+      <item>
+        <label>Anafuleza Xavier</label>
+        <value>Anafuleza_Xavier</value>
+      </item>
+      <item>
+        <label>André Silvestre Cobre</label>
+        <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Angelina Marques Impeia</label>
+        <value>Angelina_Marques_Impeia</value>
+      </item>
+      <item>
+        <label>Arlindo Macuva</label>
+        <value>Arlindo_Macuva</value>
+      </item>
+      <item>
+        <label>Artur Afonso Viegas</label>
+        <value>Artur_Afonso_Viegas</value>
+      </item>
+      <item>
+        <label>Bonefacio Basílio</label>
+        <value>Bonefacio_Basílio</value>
+      </item>
+      <item>
+        <label>Calisto Agostinho Inácio</label>
+        <value>Calisto_Agostinho_Inácio</value>
+      </item>
+      <item>
+        <label>Celestina Armando</label>
+        <value>Celestina_Armando</value>
+      </item>
+      <item>
+        <label>Celestina Joaquim Muanavava</label>
+        <value>Celestina_Joaquim_Muanavava</value>
+      </item>
+      <item>
+        <label>Celestino Machaia Maia</label>
+        <value>Celestino_Machaia_Maia</value>
+      </item>
+      <item>
+        <label>Constantino Jerónimo</label>
+        <value>Constantino_Jerónimo</value>
+      </item>
+      <item>
+        <label>Costa António</label>
+        <value>Costa_António</value>
+      </item>
+      <item>
+        <label>Damacio Feliciano</label>
+        <value>Damacio_Feliciano</value>
+      </item>
+      <item>
+        <label>Diosa Alberto</label>
+        <value>Diosa_Alberto</value>
+      </item>
+      <item>
+        <label>Ericha Jose Elurane</label>
+        <value>Ericha_Jose_Elurane_</value>
+      </item>
+      <item>
+        <label>Eulalia Pedro Candua</label>
+        <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Gelacio Muganiua</label>
+        <value>Gelacio_Muganiua_</value>
+      </item>
+      <item>
+        <label>Geraldo Armando</label>
+        <value>Geraldo_Armando</value>
+      </item>
+      <item>
+        <label>Geraldo E. Segura</label>
+        <value>Geraldo_E_Segura</value>
+      </item>
+      <item>
+        <label>Honorio Pedro</label>
+        <value>Honorio_Pedro</value>
+      </item>
+      <item>
+        <label>Joana Joao</label>
+        <value>Joana_Joao</value>
+      </item>
+      <item>
+        <label>Leonardo Henriques</label>
+        <value>Leonardo_Henriques</value>
+      </item>
+      <item>
+        <label>Liliete Arlindo Francisco</label>
+        <value>Liliete_Arlindo_Francisco</value>
+      </item>
+      <item>
+        <label>Lourenco Manuel Eugenio</label>
+        <value>Lourenco_Manuel_Eugenio</value>
+      </item>
+      <item>
+        <label>Luis Botomane</label>
+        <value>Luis_Botomane</value>
+      </item>
+      <item>
+        <label>Magaia Armando</label>
+        <value>Magaia_Armando</value>
+      </item>
+      <item>
+        <label>Mateus Francisco Bizueque</label>
+        <value>Mateus_Francisco_Bizueque</value>
+      </item>
+      <item>
+        <label>Michael Antonio Whiulano</label>
+        <value>Michael_Antonio_Whiulano</value>
+      </item>
+      <item>
+        <label>Neldo Joao</label>
+        <value>Neldo_Joao</value>
+      </item>
+      <item>
+        <label>Olinda Rui Muquelesse</label>
+        <value>Olinda_Rui_Muquelesse</value>
+      </item>
+      <item>
+        <label>Onessimo A. Nepele</label>
+        <value>Onessimo_A_Nepele</value>
+      </item>
+      <item>
+        <label>Rassul Francisco Manuel</label>
+        <value>Rassul_Francisco_Manuel</value>
+      </item>
+      <item>
+        <label>Sadraque Franscisco</label>
+        <value>Sadraque_Franscisco</value>
+      </item>
+      <item>
+        <label>Xerife Gabriel</label>
+        <value>Xerife_Gabriel</value>
+      </item>
+      <item>
+        <label>Zito Afonso</label>
+        <value>Zito_Afonso</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/ILRG_R_objeccoes/Rg2">
+      <label>Novo nome do(a) técnico(a):</label>
+      <input ref="/ILRG_R_objeccoes/Rg2/tec_given_name">
+        <label>Escreve o seu nome se não apareceu na lista</label>
+      </input>
+      <input ref="/ILRG_R_objeccoes/Rg2/tec_family_name">
+        <label>Escreve o seu apelido se não apareceu na lista</label>
+      </input>
+    </group>
+    <select1 appearance="minimal" ref="/ILRG_R_objeccoes/prov_id">
+      <label>Selecionar a província</label>
+      <item>
+        <label>Cabo Delgado</label>
+        <value>P02</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>P09</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>P08</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>P06</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>P10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>P03</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>P01</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>P07</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>P05</value>
+      </item>
+      <item>
+        <label>Zambezia</label>
+        <value>P04</value>
+      </item>
+    </select1>
+    <input appearance="minimal" query="instance('districts')/root/item[prov_id= /ILRG_R_objeccoes/prov_id ]" ref="/ILRG_R_objeccoes/dist_id">
+      <label>Selecionar o distrito</label>
+    </input>
+    <input appearance="minimal" query="instance('posts')/root/item[dist_id= /ILRG_R_objeccoes/dist_id ]" ref="/ILRG_R_objeccoes/post_id">
+      <label>Selecionar o posto administrativo</label>
+    </input>
+    <input appearance="minimal" query="instance('assocs')/root/item[post_id= /ILRG_R_objeccoes/post_id ]" ref="/ILRG_R_objeccoes/assoc_id">
+      <label>Selecionar a associação</label>
+    </input>
+    <input appearance="numbers" ref="/ILRG_R_objeccoes/parcel_id">
+      <label>Qual é o numero da parcela/registo?</label>
+    </input>
+    <input appearance="numbers" ref="/ILRG_R_objeccoes/parcel_id_check">
+      <label>Por favor, re-digite o número da parcela/registo como confirmação:</label>
+    </input>
+    <select1 ref="/ILRG_R_objeccoes/outcome">
+      <label>Por favor, selecione o resultado para esta parcela</label>
+      <item>
+        <label>Todos os detalhes estão corretos e confirmados</label>
+        <value>certify</value>
+      </item>
+      <item>
+        <label>Foi feita uma alteração aos detalhes do(s) (co-)titular(es) ou as limites da parcela</label>
+        <value>change</value>
+      </item>
+      <item>
+        <label>Foi feita uma objecção que necessita uma resolução ainda</label>
+        <value>disputed</value>
+      </item>
+      <item>
+        <label>O titular não confirmou os seus detalhes durante o período de O &amp; C</label>
+        <value>unconfirmed</value>
+      </item>
+    </select1>
+    <input appearance="numbers" ref="/ILRG_R_objeccoes/party_id">
+      <label>Qual é o numero (Interno id) do titular ou co-titular?</label>
+      <hint>Isto é o 'Interno id'</hint>
+    </input>
+    <input appearance="numbers" ref="/ILRG_R_objeccoes/party_id_check">
+      <label>Por favor, re-digite o número (Interno id) do titular ou co-titular como confirmação:</label>
+    </input>
+    <select ref="/ILRG_R_objeccoes/issues">
+      <label>Indique toda a informação que precisa ser alterada:</label>
+      <item>
+        <label>Mudar o numero da parcela</label>
+        <value>parcel</value>
+      </item>
+      <item>
+        <label>Mudar o apelido da pessoa</label>
+        <value>family_name</value>
+      </item>
+      <item>
+        <label>Mudar o nome da pessoa</label>
+        <value>given_name</value>
+      </item>
+      <item>
+        <label>Mudar o outro nome  da pessoa</label>
+        <value>other_name</value>
+      </item>
+      <item>
+        <label>Mudar o género da pessoa:</label>
+        <value>gender</value>
+      </item>
+      <item>
+        <label>Mudar o tipo de documento de identificação</label>
+        <value>id_document</value>
+      </item>
+      <item>
+        <label>Mudar o numero de documento</label>
+        <value>id_number</value>
+      </item>
+      <item>
+        <label>Mudar o data de nascimento</label>
+        <value>birthdate</value>
+      </item>
+      <item>
+        <label>Reconfigurar os limites da parcela</label>
+        <value>reconfig</value>
+      </item>
+    </select>
+    <input appearance="numbers" ref="/ILRG_R_objeccoes/parcel_id_new">
+      <label>Mudar numero da parcela/registo para:</label>
+    </input>
+    <input ref="/ILRG_R_objeccoes/new_family_name">
+      <label>Mudar apelido da pessoa para:</label>
+    </input>
+    <input ref="/ILRG_R_objeccoes/new_name">
+      <label>Mudar nome da pessoa para:</label>
+    </input>
+    <input ref="/ILRG_R_objeccoes/new_other_name">
+      <label>Mudar outro nome da pessoa para:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_R_objeccoes/new_gender">
+      <label>Mudar género da pessoa para:</label>
+      <item>
+        <label>Masculino</label>
+        <value>male</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>female</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/ILRG_R_objeccoes/new_birthdate">
+      <label>Mudar data de nascimento da pessoa para:</label>
+    </input>
+    <select1 appearance="minimal" ref="/ILRG_R_objeccoes/new_id_document">
+      <label>Mudar o tipo de documento de identificação:</label>
+      <item>
+        <label>Bilhete de Identidade</label>
+        <value>identity_document</value>
+      </item>
+      <item>
+        <label>Talão do BI</label>
+        <value>identity_receipt</value>
+      </item>
+      <item>
+        <label>Cartão de Eleitor</label>
+        <value>voter_card</value>
+      </item>
+      <item>
+        <label>Cédula Pessoal</label>
+        <value>personal_ballot</value>
+      </item>
+      <item>
+        <label>Declaração (Documento de Testemunhas)</label>
+        <value>declaration</value>
+      </item>
+      <item>
+        <label>Cartão de Desmobilização/Cartão Militar</label>
+        <value>demobilization_card</value>
+      </item>
+      <item>
+        <label>Passaporte</label>
+        <value>passport</value>
+      </item>
+      <item>
+        <label>Carta de Condução</label>
+        <value>driving_licence</value>
+      </item>
+      <item>
+        <label>Cartão de pagamento de imposto</label>
+        <value>tax_payment_card</value>
+      </item>
+      <item>
+        <label>NUIT</label>
+        <value>nuit</value>
+      </item>
+      <item>
+        <label>outro</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/ILRG_R_objeccoes/new_id_number">
+      <label>Mudar o numero de documento para:</label>
+    </input>
+    <upload mediatype="image/*" ref="/ILRG_R_objeccoes/new_limits_image">
+      <label>Tire uma fotografia da parcela no mapa, mostrando claramente a mudança nos limites</label>
+    </upload>
+  </h:body>
+</h:html>
