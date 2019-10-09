@@ -11,7 +11,7 @@
         </translation>
       </itext>
       <instance>
-        <ILRG_ORAM_P1_redo_limites id="ILRG_ORAM_P1" version="201908131">
+        <ILRG_ORAM_P1_redo_limites id="ILRG_ORAM_P1" version="201909041">
           <start/>
           <deviceid/>
           <today/>
@@ -81,12 +81,32 @@ Por favor deslizar para a frente para continuar.</label>
     <select1 appearance="minimal" ref="/ILRG_ORAM_P1_redo_limites/tec_name">
       <label>Introduza o seu nome&lt;br/&gt;&lt;br/&gt;Nome do(a) técnico(a):</label>
       <item>
+        <label>Abasto Abasto Janeiro</label>
+        <value>Abasto_Abasto_Janeiro</value>
+      </item>
+      <item>
+        <label>Abrao Saraiva Namuiri</label>
+        <value>Abrao_Saraiva_Namuiri</value>
+      </item>
+      <item>
         <label>Adolfo da Suzana Santos</label>
         <value>Adolfo_Suzana_Santos</value>
       </item>
       <item>
+        <label>Adriano Banco</label>
+        <value>Adriano_Banco</value>
+      </item>
+      <item>
+        <label>Anafuleza Xavier</label>
+        <value>Anafuleza_Xavier</value>
+      </item>
+      <item>
         <label>André Silvestre Cobre</label>
         <value>Andre_Silvestre_Cobre</value>
+      </item>
+      <item>
+        <label>Angelina Marques Impeia</label>
+        <value>Angelina_Marques_Impeia</value>
       </item>
       <item>
         <label>Arlindo Macuva</label>
@@ -134,11 +154,15 @@ Por favor deslizar para a frente para continuar.</label>
       </item>
       <item>
         <label>Ericha Jose Elurane</label>
-        <value>Ericha_Jose_Elurane</value>
+        <value>Ericha_Jose_Elurane_</value>
       </item>
       <item>
         <label>Eulalia Pedro Candua</label>
         <value>Eulalia_Pedro_Candua</value>
+      </item>
+      <item>
+        <label>Gelacio Muganiua</label>
+        <value>Gelacio_Muganiua_</value>
       </item>
       <item>
         <label>Geraldo Armando</label>
@@ -165,6 +189,10 @@ Por favor deslizar para a frente para continuar.</label>
         <value>Liliete_Arlindo_Francisco</value>
       </item>
       <item>
+        <label>Lourenco Manuel Eugenio</label>
+        <value>Lourenco_Manuel_Eugenio</value>
+      </item>
+      <item>
         <label>Luis Botomane</label>
         <value>Luis_Botomane</value>
       </item>
@@ -175,6 +203,10 @@ Por favor deslizar para a frente para continuar.</label>
       <item>
         <label>Mateus Francisco Bizueque</label>
         <value>Mateus_Francisco_Bizueque</value>
+      </item>
+      <item>
+        <label>Michael Antonio Whiulano</label>
+        <value>Michael_Antonio_Whiulano</value>
       </item>
       <item>
         <label>Neldo Joao</label>
